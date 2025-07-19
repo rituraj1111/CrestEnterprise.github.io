@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 const Products = () => {
   const products = [
     {
-      name: "Standard Thermal Rolls",
+      name: "Thermal Rolls 80mm",
       size: "80mm x 80mm",
       description: "Perfect for POS systems, billing machines, and receipt printers",
       features: ["BPA Free", "High Quality", "Long Lasting", "Cost Effective"],
@@ -24,7 +24,7 @@ const Products = () => {
       price: "₹45-65 per roll",
     },
     {
-      name: "Premium Thermal Rolls", 
+      name: "Thermal Rolls 57mm", 
       size: "57mm x 40mm",
       description: "Compact rolls ideal for handheld devices and mobile printers",
       features: ["Anti-Fade", "Smooth Print", "Eco-Friendly", "Weather Resistant"],
@@ -39,7 +39,7 @@ const Products = () => {
       price: "₹25-35 per roll",
     },
     {
-      name: "Industrial Thermal Rolls",
+      name: "Thermal Rolls 110mm",
       size: "110mm x 100mm",
       description: "Heavy-duty rolls for high-volume printing requirements",
       features: ["Extra Strong", "Heat Resistant", "Quick Print", "High Volume"],

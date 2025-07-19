@@ -3,11 +3,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Ruler, Package, Zap, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
+import thermalRolls from "@/assets/thermal-rolls.jpg";
 
 const ProductsSection = () => {
   const products = [
     {
-      name: "Standard Thermal Rolls",
+      name: "Thermal Rolls 80mm",
       size: "80mm x 80mm",
       description: "Perfect for POS systems, billing machines, and receipt printers",
       features: ["BPA Free", "High Quality", "Long Lasting"],
@@ -15,7 +16,7 @@ const ProductsSection = () => {
       icon: Package,
     },
     {
-      name: "Premium Thermal Rolls", 
+      name: "Thermal Rolls 57mm", 
       size: "57mm x 40mm",
       description: "Compact rolls ideal for handheld devices and mobile printers",
       features: ["Anti-Fade", "Smooth Print", "Eco-Friendly"],
@@ -23,7 +24,7 @@ const ProductsSection = () => {
       icon: Zap,
     },
     {
-      name: "Industrial Thermal Rolls",
+      name: "Thermal Rolls 110mm",
       size: "110mm x 100mm",
       description: "Heavy-duty rolls for high-volume printing requirements",
       features: ["Extra Strong", "Heat Resistant", "Quick Print"],
@@ -36,6 +37,13 @@ const ProductsSection = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
+          <div className="mb-8">
+            <img 
+              src={thermalRolls} 
+              alt="Thermal Paper Rolls" 
+              className="w-64 h-48 mx-auto rounded-2xl object-cover shadow-elegant"
+            />
+          </div>
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Our Thermal Paper{" "}
             <span className="bg-gradient-accent bg-clip-text text-transparent">Products</span>

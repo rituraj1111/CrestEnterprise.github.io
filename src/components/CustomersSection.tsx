@@ -1,5 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Fuel, Hotel, ShoppingCart, Building2, Utensils, MapPin } from "lucide-react";
+import petrolPumpImage from "@/assets/petrol-pump.jpg";
+import supermarketImage from "@/assets/supermarket.jpg";
+import hotelImage from "@/assets/hotel.jpg";
 
 const CustomersSection = () => {
   const customerSegments = [
@@ -7,6 +10,7 @@ const CustomersSection = () => {
       name: "Petrol Pumps",
       description: "Fuel receipt printing for vehicles and customers",
       icon: Fuel,
+      image: petrolPumpImage,
       features: ["Weather Resistant", "Quick Print", "Clear Text"],
       color: "bg-blue-500",
     },
@@ -14,6 +18,7 @@ const CustomersSection = () => {
       name: "Hotels & Restaurants",
       description: "Billing, KOT, and guest receipt management",
       icon: Hotel,
+      image: hotelImage,
       features: ["Food Safe", "Fast Printing", "Professional Look"],
       color: "bg-green-500",
     },
@@ -21,6 +26,7 @@ const CustomersSection = () => {
       name: "Supermarkets",
       description: "High-volume checkout and inventory printing",
       icon: ShoppingCart,
+      image: supermarketImage,
       features: ["High Capacity", "Barcode Support", "Cost Effective"],
       color: "bg-purple-500",
     },
@@ -69,8 +75,17 @@ const CustomersSection = () => {
             return (
               <Card 
                 key={index} 
-                className="hover:shadow-medium transition-all duration-300 group hover:-translate-y-2 border-0 shadow-soft"
+                className="hover:shadow-medium transition-all duration-300 group hover:-translate-y-2 border-0 shadow-soft overflow-hidden"
               >
+                {segment.image && (
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src={segment.image} 
+                      alt={segment.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                )}
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className={`p-3 rounded-lg ${segment.color} text-white group-hover:scale-110 transition-transform duration-300`}>
