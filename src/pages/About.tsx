@@ -7,11 +7,11 @@ import Footer from "@/components/Footer";
 
 const About = () => {
   const milestones = [
-    { year: "2005", title: "Company Founded", description: "Started with a vision to provide quality thermal paper solutions" },
-    { year: "2010", title: "ISO Certification", description: "Achieved ISO 9001:2015 certification for quality management" },
-    { year: "2015", title: "Pan-India Expansion", description: "Expanded operations to serve customers across India" },
-    { year: "2020", title: "Digital Transformation", description: "Modernized manufacturing with latest technology" },
-    { year: "2023", title: "500+ Clients", description: "Reached milestone of serving 500+ satisfied customers" },
+    { year: "2015", title: "Company Founded", description: "Started with a vision to provide quality thermal paper solutions" },
+    { year: "2018", title: "Production Scale-up", description: "Expanded manufacturing capacity to meet growing demand" },
+    { year: "2020", title: "Pan-India Expansion", description: "Expanded operations to serve customers across India" },
+    { year: "2022", title: "Digital Transformation", description: "Modernized manufacturing with latest technology" },
+    { year: "2024", title: "10,000+ Clients", description: "Reached milestone of serving 10,000+ satisfied customers" },
   ];
 
   const values = [
@@ -71,7 +71,7 @@ const About = () => {
               <span className="bg-gradient-accent bg-clip-text text-transparent">Crest Enterprise</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Leading the thermal paper industry with 18+ years of excellence, innovation, and unwavering commitment to quality.
+              Leading the thermal paper industry with 9+ years of excellence, innovation, and unwavering commitment to quality.
             </p>
           </div>
 
@@ -81,7 +81,7 @@ const About = () => {
               <h2 className="text-3xl font-bold text-foreground mb-6">Our Story</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Founded in 2005, Crest Enterprise began with a simple mission: to provide businesses 
+                  Founded in 2015, Crest Enterprise began with a simple mission: to provide businesses 
                   across India with reliable, high-quality thermal paper solutions. What started as a 
                   small manufacturing unit has grown into one of the leading thermal paper suppliers in the country.
                 </p>
@@ -91,7 +91,7 @@ const About = () => {
                   that every thermal paper roll meets the highest industry standards.
                 </p>
                 <p>
-                  Today, we proudly serve over 500 businesses across various industries, from small 
+                  Today, we proudly serve over 10,000 businesses across various industries, from small 
                   retail stores to large supermarket chains, helping them streamline their printing 
                   operations with our premium thermal paper products.
                 </p>
@@ -103,11 +103,11 @@ const About = () => {
             <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">18+</div>
+                  <div className="text-4xl font-bold text-primary mb-2">9+</div>
                   <div className="text-sm text-muted-foreground">Years of Excellence</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">500+</div>
+                  <div className="text-4xl font-bold text-primary mb-2">10,000+</div>
                   <div className="text-sm text-muted-foreground">Happy Clients</div>
                 </div>
                 <div className="text-center">
@@ -171,30 +171,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* Leadership Team */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Leadership Team</h2>
-              <p className="text-lg text-muted-foreground">
-                Meet the experienced professionals driving our company's vision and growth.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {team.map((member, index) => (
-                <Card key={index} className="text-center hover:shadow-medium transition-shadow duration-300">
-                  <CardContent className="p-6">
-                    <div className="mx-auto mb-4 w-20 h-20 bg-gradient-accent rounded-full flex items-center justify-center">
-                      <Users className="h-10 w-10 text-accent-foreground" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-foreground mb-1">{member.name}</h3>
-                    <p className="text-primary font-medium mb-2">{member.position}</p>
-                    <p className="text-sm text-muted-foreground mb-3">{member.experience}</p>
-                    <p className="text-sm text-muted-foreground">{member.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
 
         </div>
       </main>

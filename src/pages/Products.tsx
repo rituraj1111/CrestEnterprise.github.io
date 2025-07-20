@@ -56,7 +56,7 @@ const Products = () => {
   ];
 
   const qualityFeatures = [
-    "ISO 9001:2015 Certified Manufacturing",
+    "Premium Quality Manufacturing",
     "BPA-Free and Environment Friendly",
     "Superior Print Quality with Sharp Text",
     "Long-lasting Storage without Fading",
@@ -188,8 +188,8 @@ const Products = () => {
             <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8">
               <div className="grid grid-cols-2 gap-6 text-center">
                 <div className="bg-card rounded-lg p-6 shadow-soft">
-                  <div className="text-3xl font-bold text-primary mb-2">ISO</div>
-                  <div className="text-sm text-muted-foreground">9001:2015 Certified</div>
+                  <div className="text-3xl font-bold text-primary mb-2">BPA</div>
+                  <div className="text-sm text-muted-foreground">Free & Eco-Friendly</div>
                 </div>
                 <div className="bg-card rounded-lg p-6 shadow-soft">
                   <div className="text-3xl font-bold text-primary mb-2">100%</div>

@@ -74,24 +74,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Company Stats */}
-        <div className="mb-8 bg-gradient-primary rounded-2xl p-8 text-center text-primary-foreground">
-          <h3 className="text-2xl font-bold mb-6">Our Achievements</h3>
-          <div className="grid md:grid-cols-3 gap-6 text-center">
-            <div>
-              <div className="text-4xl font-bold mb-2">500+</div>
-              <div className="text-sm opacity-90">Happy Customers</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">10+</div>
-              <div className="text-sm opacity-90">Years Experience</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">10M+</div>
-              <div className="text-sm opacity-90">Thermal Rolls Delivered</div>
-            </div>
-          </div>
-        </div>
 
         <Separator className="my-8 bg-primary-foreground/20" />
 
