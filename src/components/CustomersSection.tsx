@@ -3,6 +3,9 @@ import { Fuel, Hotel, ShoppingCart, Building2, Utensils, MapPin } from "lucide-r
 import petrolPumpImage from "@/assets/petrol-pump.jpg";
 import supermarketImage from "@/assets/supermarket.jpg";
 import hotelImage from "@/assets/hotel.jpg";
+import corporateImage from "@/assets/corporate.jpg";
+import foodCourtImage from "@/assets/food-court.jpg";
+import transportImage from "@/assets/transport.jpg";
 
 const CustomersSection = () => {
   const customerSegments = [
@@ -34,6 +37,7 @@ const CustomersSection = () => {
       name: "Corporate Offices",
       description: "Invoice, receipt, and document printing",
       icon: Building2,
+      image: corporateImage,
       features: ["Professional Grade", "Long Storage", "Fade Resistant"],
       color: "bg-orange-500",
     },
@@ -41,6 +45,7 @@ const CustomersSection = () => {
       name: "Food Courts",
       description: "Order tickets and customer receipts",
       icon: Utensils,
+      image: foodCourtImage,
       features: ["Oil Resistant", "Quick Service", "Easy Handling"],
       color: "bg-red-500",
     },
@@ -48,6 +53,7 @@ const CustomersSection = () => {
       name: "Transport Hubs",
       description: "Ticketing and logistics documentation",
       icon: MapPin,
+      image: transportImage,
       features: ["Durable", "High Speed", "Multiple Sizes"],
       color: "bg-indigo-500",
     },

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Mail, Phone, MapPin, Clock, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
@@ -25,20 +25,6 @@ const Footer = () => {
               Leading manufacturer and supplier of premium thermal paper rolls, 
               serving businesses across India with reliable printing solutions since 2005.
             </p>
-            <div className="flex space-x-3">
-              <Button variant="ghost" size="icon" className="hover:bg-primary-foreground/10">
-                <Facebook className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-primary-foreground/10">
-                <Twitter className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-primary-foreground/10">
-                <Linkedin className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-primary-foreground/10">
-                <Instagram className="h-4 w-4" />
-              </Button>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -57,17 +43,6 @@ const Footer = () => {
               <Link to="/contact" className="text-sm opacity-90 hover:opacity-100 transition-opacity">
                 Contact
               </Link>
-            </nav>
-          </div>
-
-          {/* Products */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Our Products</h4>
-            <nav className="flex flex-col space-y-2">
-              <span className="text-sm opacity-90">Standard Thermal Rolls</span>
-              <span className="text-sm opacity-90">Premium Thermal Rolls</span>
-              <span className="text-sm opacity-90">Industrial Thermal Rolls</span>
-              <span className="text-sm opacity-90">Custom Size Rolls</span>
             </nav>
           </div>
 
@@ -95,6 +70,25 @@ const Footer = () => {
                 <Clock className="h-4 w-4 opacity-75" />
                 <span className="text-sm opacity-90">Mon-Sat: 9AM-6PM</span>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Company Stats */}
+        <div className="mb-8 bg-gradient-primary rounded-2xl p-8 text-center text-primary-foreground">
+          <h3 className="text-2xl font-bold mb-6">Our Achievements</h3>
+          <div className="grid md:grid-cols-3 gap-6 text-center">
+            <div>
+              <div className="text-4xl font-bold mb-2">500+</div>
+              <div className="text-sm opacity-90">Happy Customers</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold mb-2">10+</div>
+              <div className="text-sm opacity-90">Years Experience</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold mb-2">10M+</div>
+              <div className="text-sm opacity-90">Thermal Rolls Delivered</div>
             </div>
           </div>
         </div>

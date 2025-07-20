@@ -207,22 +207,6 @@ const Products = () => {
             </div>
           </div>
 
-          {/* Custom Solutions CTA */}
-          <div className="bg-gradient-primary rounded-2xl p-12 text-center text-primary-foreground">
-            <h3 className="text-3xl font-bold mb-4">Need Custom Solutions?</h3>
-            <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-              We understand that every business has unique requirements. 
-              Our team can create custom thermal paper solutions tailored to your specific needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild variant="secondary" size="lg">
-                <Link to="/contact">Request Custom Quote</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                <Link to="/contact">Speak with Expert</Link>
-              </Button>
-            </div>
-          </div>
         </div>
       </main>
 

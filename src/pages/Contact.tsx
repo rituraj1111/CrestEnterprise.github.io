@@ -232,28 +232,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Additional Info */}
-          <div className="mt-16 bg-gradient-primary rounded-2xl p-8 text-center text-primary-foreground">
-            <h3 className="text-2xl font-bold mb-4">Why Choose Crest Enterprise?</h3>
-            <div className="grid md:grid-cols-4 gap-6">
-              <div>
-                <div className="text-3xl font-bold mb-2">18+</div>
-                <div className="text-sm opacity-90">Years of Experience</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold mb-2">500+</div>
-                <div className="text-sm opacity-90">Satisfied Clients</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold mb-2">24/7</div>
-                <div className="text-sm opacity-90">Customer Support</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold mb-2">100%</div>
-                <div className="text-sm opacity-90">Quality Assured</div>
-              </div>
-            </div>
-          </div>
         </div>
       </main>
 

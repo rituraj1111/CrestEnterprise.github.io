@@ -196,41 +196,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* Why Choose Us */}
-          <div className="bg-gradient-primary rounded-2xl p-12 text-center text-primary-foreground">
-            <h3 className="text-3xl font-bold mb-6">Why Choose Crest Enterprise?</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="h-6 w-6" />
-                <span>ISO 9001:2015 Certified</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="h-6 w-6" />
-                <span>18+ Years Experience</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="h-6 w-6" />
-                <span>Pan-India Delivery</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="h-6 w-6" />
-                <span>24/7 Customer Support</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="h-6 w-6" />
-                <span>Competitive Pricing</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="h-6 w-6" />
-                <span>Custom Solutions</span>
-              </div>
-            </div>
-            <div className="mt-8">
-              <Button asChild variant="secondary" size="lg">
-                <Link to="/contact">Start Your Partnership</Link>
-              </Button>
-            </div>
-          </div>
         </div>
       </main>
 
