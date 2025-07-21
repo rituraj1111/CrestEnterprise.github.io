@@ -22,21 +22,46 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Enquiry Submitted!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      productType: "",
-      quantity: "",
-      message: "",
-    });
+    
+    try {
+      // Create mailto link with form data
+      const subject = encodeURIComponent(`Enquiry from ${formData.name} - ${formData.company || 'Individual'}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\n` +
+        `Email: ${formData.email}\n` +
+        `Phone: ${formData.phone}\n` +
+        `Company: ${formData.company || 'N/A'}\n` +
+        `Product Type: ${formData.productType}\n` +
+        `Quantity: ${formData.quantity || 'N/A'}\n\n` +
+        `Message:\n${formData.message || 'No additional message'}`
+      );
+      
+      const mailtoLink = `mailto:enterprise.crest@gmail.com?subject=${subject}&body=${body}`;
+      window.open(mailtoLink, '_blank');
+      
+      toast({
+        title: "Enquiry Initiated!",
+        description: "Your email client will open with the enquiry details. Please send the email to complete your request.",
+      });
+      
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        productType: "",
+        quantity: "",
+        message: "",
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleChange = (field: string, value: string) => {
@@ -82,7 +107,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Phone</h3>
-                    <p className="text-muted-foreground">+91 98765 43210</p>
+                    <p className="text-muted-foreground">9890479000</p>
                     <p className="text-sm text-muted-foreground">Mon-Sat: 9AM-6PM</p>
                   </div>
                 </div>
@@ -93,7 +118,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Email</h3>
-                    <p className="text-muted-foreground">info@crestenterprise.com</p>
+                    <p className="text-muted-foreground">enterprise.crest@gmail.com</p>
                     <p className="text-sm text-muted-foreground">We reply within 24 hours</p>
                   </div>
                 </div>
@@ -104,11 +129,10 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Address</h3>
-                    <p className="text-muted-foreground">
-                      Industrial Area, Sector 45<br />
-                      Gurgaon, Haryana 122003<br />
-                      India
-                    </p>
+                     <p className="text-muted-foreground">
+                       Kupwad, Sangli 416 416<br />
+                       Maharashtra, India
+                     </p>
                   </div>
                 </div>
 
@@ -170,7 +194,7 @@ const Contact = () => {
                           id="phone"
                           value={formData.phone}
                           onChange={(e) => handleChange("phone", e.target.value)}
-                          placeholder="+91 98765 43210"
+                          placeholder="9890479000"
                           required
                         />
                       </div>
@@ -193,9 +217,8 @@ const Contact = () => {
                             <SelectValue placeholder="Select product type" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="standard">Standard Thermal Rolls (80mm x 80mm)</SelectItem>
-                            <SelectItem value="premium">Premium Thermal Rolls (57mm x 40mm)</SelectItem>
-                            <SelectItem value="industrial">Industrial Thermal Rolls (110mm x 100mm)</SelectItem>
+                            <SelectItem value="57mm">57mm Thermal Rolls</SelectItem>
+                            <SelectItem value="79mm">79mm Thermal Rolls</SelectItem>
                             <SelectItem value="custom">Custom Size Requirements</SelectItem>
                           </SelectContent>
                         </Select>

@@ -70,9 +70,9 @@ const About = () => {
               About{" "}
               <span className="bg-gradient-accent bg-clip-text text-transparent">Crest Enterprise</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Leading the thermal paper industry with 9+ years of excellence, innovation, and unwavering commitment to quality.
-            </p>
+             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+               Leading the thermal paper industry with 9+ years of excellence, innovation, and unwavering commitment to quality since 2015.
+             </p>
           </div>
 
           {/* Company Story */}

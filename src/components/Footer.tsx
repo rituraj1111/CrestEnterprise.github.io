@@ -21,10 +21,10 @@ const Footer = () => {
                 <p className="text-sm opacity-75">Thermal Paper Solutions</p>
               </div>
             </div>
-            <p className="text-sm opacity-90 leading-relaxed">
-              Leading manufacturer and supplier of premium thermal paper rolls, 
-              serving businesses across India with reliable printing solutions since 2005.
-            </p>
+             <p className="text-sm opacity-90 leading-relaxed">
+               Leading manufacturer and supplier of premium thermal paper rolls, 
+               serving businesses across India with reliable printing solutions since 2015.
+             </p>
           </div>
 
           {/* Quick Links */}
@@ -53,18 +53,17 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 mt-1 opacity-75" />
                 <div className="text-sm opacity-90">
-                  <div>Industrial Area, Sector 45</div>
-                  <div>Gurgaon, Haryana 122003</div>
-                  <div>India</div>
+                   <div>Kupwad, Sangli 416 416</div>
+                   <div>Maharashtra, India</div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 opacity-75" />
-                <span className="text-sm opacity-90">+91 98765 43210</span>
+                <span className="text-sm opacity-90">9890479000</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 opacity-75" />
-                <span className="text-sm opacity-90">info@crestenterprise.com</span>
+                <span className="text-sm opacity-90">enterprise.crest@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="h-4 w-4 opacity-75" />

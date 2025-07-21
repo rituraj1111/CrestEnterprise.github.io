@@ -5,19 +5,14 @@ import { Link } from "react-router-dom";
 const VideoHero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Video Background */}
+      {/* Background Image */}
       <div className="absolute inset-0">
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="/thermal-paper-story.mp4" type="video/mp4" />
-          {/* Fallback content */}
-          <div className="w-full h-full bg-gradient-to-br from-primary/10 to-accent/10"></div>
-        </video>
+        <div 
+          className="w-full h-full bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('/src/assets/hero-bg.jpg')`
+          }}
+        ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/70"></div>
       </div>
 
@@ -55,7 +50,7 @@ const VideoHero = () => {
               <div className="space-y-3 text-muted-foreground">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-accent rounded-full"></div>
-                  <span>Same-day delivery in major cities</span>
+                  <span>2-3 days delivery in major cities</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-accent rounded-full"></div>
