@@ -4,60 +4,24 @@ import { ArrowRight, Package } from "lucide-react";
 import { Link } from "react-router-dom";
 import billingMachinesImg from "@/assets/billing-machines.jpg";
 import thermalRollsImg from "@/assets/thermal-rolls.jpg";
-import img57x13 from "@/assets/57mm-13mtr.jpg";
-import img57x15 from "@/assets/57mm-15mtr.jpg";
-import img57x20 from "@/assets/57mm-20mtr.jpg";
-import img57x25 from "@/assets/57mm-25mtr.jpg";
-import img79x30 from "@/assets/79mm-30mtr.jpg";
-import img79x50 from "@/assets/79mm-50mtr.jpg";
-import img79x40 from "@/assets/79mm-40mtr.jpg";
+import img57mmCategory from "@/assets/57mm-category.jpg";
+import img79mmCategory from "@/assets/79mm-category.jpg";
 
 const ProductsSection = () => {
-  const products57mm = [
+  const thermalRollCategories = [
     {
-      id: "57x13",
-      size: "57mm × 13 mtr",
-      image: img57x13,
-      description: "Perfect for small retail POS systems and billing machines"
+      id: "57mm",
+      title: "57mm Thermal Rolls",
+      image: img57mmCategory,
+      description: "Perfect for small to medium retail POS systems, handheld billing devices, and standard receipt printing applications.",
+      sizes: ["13 mtr", "15 mtr", "20 mtr", "25 mtr"]
     },
     {
-      id: "57x15",
-      size: "57mm × 15 mtr",
-      image: img57x15,
-      description: "Standard size for most handheld billing devices"
-    },
-    {
-      id: "57x20",
-      size: "57mm × 20 mtr",
-      image: img57x20,
-      description: "Extended length for high-volume printing applications"
-    },
-    {
-      id: "57x25",
-      size: "57mm × 25 mtr",
-      image: img57x25,
-      description: "Premium length for continuous operations"
-    }
-  ];
-
-  const products79mm = [
-    {
-      id: "79x30",
-      size: "79mm × 30 mtr",
-      image: img79x30,
-      description: "Standard for medium-sized POS and billing systems"
-    },
-    {
-      id: "79x50",
-      size: "79mm × 50 mtr",
-      image: img79x50,
-      description: "High-capacity rolls for busy retail environments"
-    },
-    {
-      id: "79x40",
-      size: "79mm × 40 mtr",
-      image: img79x40,
-      description: "Ideal balance of size and capacity for most businesses"
+      id: "79mm",
+      title: "79mm Thermal Rolls", 
+      image: img79mmCategory,
+      description: "Ideal for medium to large POS systems, high-volume retail environments, and professional billing applications.",
+      sizes: ["30 mtr", "40 mtr", "50 mtr"]
     }
   ];
 
@@ -110,50 +74,39 @@ const ProductsSection = () => {
           </Card>
         </div>
 
-        {/* 57mm SKU Products */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-bold text-foreground mb-8 text-center">57mm Thermal Rolls</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {products57mm.map((product) => (
-              <Card key={product.id} className="overflow-hidden shadow-medium hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="relative h-48">
-                  <img 
-                    src={product.image} 
-                    alt={`Thermal paper roll ${product.size}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardHeader className="pb-3">
-                  <CardTitle className="text-lg text-center text-primary">{product.size}</CardTitle>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <p className="text-muted-foreground text-sm text-center">{product.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* 79mm SKU Products */}
+        {/* Thermal Roll Categories */}
         <div className="mb-12">
-          <h3 className="text-3xl font-bold text-foreground mb-8 text-center">79mm Thermal Rolls</h3>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {products79mm.map((product) => (
-              <Card key={product.id} className="overflow-hidden shadow-medium hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="relative h-48">
-                  <img 
-                    src={product.image} 
-                    alt={`Thermal paper roll ${product.size}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardHeader className="pb-3">
-                  <CardTitle className="text-lg text-center text-primary">{product.size}</CardTitle>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <p className="text-muted-foreground text-sm text-center">{product.description}</p>
-                </CardContent>
-              </Card>
+          <h3 className="text-3xl font-bold text-foreground mb-8 text-center">Our Thermal Roll Categories</h3>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {thermalRollCategories.map((category) => (
+              <Link key={category.id} to="/products" className="block">
+                <Card className="overflow-hidden shadow-medium hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer group">
+                  <div className="relative h-64">
+                    <img 
+                      src={category.image} 
+                      alt={category.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <div className="absolute bottom-4 left-4 right-4 text-white">
+                      <h4 className="text-2xl font-bold mb-2">{category.title}</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {category.sizes.map((size) => (
+                          <span key={size} className="bg-white/20 backdrop-blur-sm px-2 py-1 rounded text-sm">
+                            {category.id} × {size}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <CardContent className="p-6">
+                    <p className="text-muted-foreground mb-4">{category.description}</p>
+                    <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                      View All {category.title} <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
