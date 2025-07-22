@@ -9,6 +9,8 @@ import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from "@/config/emailjs";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -26,24 +28,28 @@ const Contact = () => {
     e.preventDefault();
     
     try {
-      // Create mailto link with form data
-      const subject = encodeURIComponent(`Enquiry from ${formData.name} - ${formData.company || 'Individual'}`);
-      const body = encodeURIComponent(
-        `Name: ${formData.name}\n` +
-        `Email: ${formData.email}\n` +
-        `Phone: ${formData.phone}\n` +
-        `Company: ${formData.company || 'N/A'}\n` +
-        `Product Type: ${formData.productType}\n` +
-        `Quantity: ${formData.quantity || 'N/A'}\n\n` +
-        `Message:\n${formData.message || 'No additional message'}`
+      // Send email using EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        company: formData.company || 'N/A',
+        product_type: formData.productType,
+        quantity: formData.quantity || 'N/A',
+        message: formData.message || 'No additional message',
+        to_email: EMAILJS_CONFIG.TO_EMAIL,
+      };
+
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams,
+        EMAILJS_CONFIG.PUBLIC_KEY
       );
-      
-      const mailtoLink = `mailto:enterprise.crest@gmail.com?subject=${subject}&body=${body}`;
-      window.open(mailtoLink, '_blank');
-      
+
       toast({
-        title: "Enquiry Initiated!",
-        description: "Your email client will open with the enquiry details. Please send the email to complete your request.",
+        title: "Enquiry Sent Successfully!",
+        description: "Thank you for your enquiry. We will get back to you within 24 hours.",
       });
       
       setFormData({
@@ -56,10 +62,26 @@ const Contact = () => {
         message: "",
       });
     } catch (error) {
+      console.error('EmailJS Error:', error);
+      
+      // Fallback to mailto if EmailJS fails
+      const subject = encodeURIComponent(`Enquiry from ${formData.name} - ${formData.company || 'Individual'}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\n` +
+        `Email: ${formData.email}\n` +
+        `Phone: ${formData.phone}\n` +
+        `Company: ${formData.company || 'N/A'}\n` +
+        `Product Type: ${formData.productType}\n` +
+        `Quantity: ${formData.quantity || 'N/A'}\n\n` +
+        `Message:\n${formData.message || 'No additional message'}`
+      );
+      
+      const mailtoLink = `mailto:${EMAILJS_CONFIG.TO_EMAIL}?subject=${subject}&body=${body}`;
+      window.open(mailtoLink, '_blank');
+      
       toast({
-        title: "Error",
-        description: "Something went wrong. Please try again or contact us directly.",
-        variant: "destructive",
+        title: "Opening Email Client",
+        description: "EmailJS is not configured. Your default email client will open to send the enquiry.",
       });
     }
   };
@@ -217,8 +239,13 @@ const Contact = () => {
                             <SelectValue placeholder="Select product type" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="57mm">57mm Thermal Rolls</SelectItem>
-                            <SelectItem value="79mm">79mm Thermal Rolls</SelectItem>
+                            <SelectItem value="57mm-13mtr">57mm × 13 mtr</SelectItem>
+                            <SelectItem value="57mm-15mtr">57mm × 15 mtr</SelectItem>
+                            <SelectItem value="57mm-20mtr">57mm × 20 mtr</SelectItem>
+                            <SelectItem value="57mm-25mtr">57mm × 25 mtr</SelectItem>
+                            <SelectItem value="79mm-30mtr">79mm × 30 mtr</SelectItem>
+                            <SelectItem value="79mm-40mtr">79mm × 40 mtr</SelectItem>
+                            <SelectItem value="79mm-50mtr">79mm × 50 mtr</SelectItem>
                             <SelectItem value="custom">Custom Size Requirements</SelectItem>
                           </SelectContent>
                         </Select>

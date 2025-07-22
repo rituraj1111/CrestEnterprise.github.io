@@ -12,50 +12,119 @@ const Products = () => {
     window.scrollTo(0, 0);
   }, []);
   const products = [
+    // 57mm SKUs
     {
-      name: "Thermal Rolls 80mm",
-      size: "80mm x 80mm",
-      description: "Perfect for POS systems, billing machines, and receipt printers",
-      features: ["BPA Free", "High Quality", "Long Lasting", "Cost Effective"],
-      applications: ["Retail Stores", "Restaurants", "Small Businesses", "Cafes"],
+      name: "Thermal Roll 57mm × 13 mtr",
+      category: "57mm",
+      size: "57mm × 13 mtr",
+      description: "Compact thermal rolls ideal for small POS systems and handheld devices",
+      features: ["BPA Free", "High Quality", "Anti-Fade", "Smooth Print"],
+      applications: ["Small POS", "Handheld Devices", "Card Machines", "Mobile Printers"],
       specifications: {
-        diameter: "80mm",
-        length: "80m",
+        diameter: "57mm",
+        length: "13 meters",
         coreDiameter: "12mm",
         gsm: "55-65",
       },
       icon: Package,
-      price: "₹45-65 per roll",
+      image: "/src/assets/57mm-13mtr.jpg",
     },
     {
-      name: "Thermal Rolls 57mm", 
-      size: "57mm x 40mm",
-      description: "Compact rolls ideal for handheld devices and mobile printers",
-      features: ["Anti-Fade", "Smooth Print", "Eco-Friendly", "Weather Resistant"],
-      applications: ["Petrol Pumps", "ATM Machines", "Mobile POS", "Card Machines"],
+      name: "Thermal Roll 57mm × 15 mtr",
+      category: "57mm",
+      size: "57mm × 15 mtr", 
+      description: "Standard thermal rolls for regular POS applications",
+      features: ["BPA Free", "High Quality", "Anti-Fade", "Smooth Print"],
+      applications: ["Retail Stores", "Small Businesses", "ATM Machines", "Card Machines"],
       specifications: {
         diameter: "57mm",
-        length: "40m",
+        length: "15 meters",
         coreDiameter: "12mm",
         gsm: "55-65",
       },
-      icon: Zap,
-      price: "₹25-35 per roll",
+      icon: Package,
+      image: "/src/assets/57mm-15mtr.jpg",
     },
     {
-      name: "Thermal Rolls 110mm",
-      size: "110mm x 100mm",
-      description: "Heavy-duty rolls for high-volume printing requirements",
-      features: ["Extra Strong", "Heat Resistant", "Quick Print", "High Volume"],
-      applications: ["Supermarkets", "Hotels", "Warehouses", "Manufacturing"],
+      name: "Thermal Roll 57mm × 20 mtr",
+      category: "57mm",
+      size: "57mm × 20 mtr",
+      description: "Extended length thermal rolls for medium usage applications",
+      features: ["BPA Free", "High Quality", "Anti-Fade", "Smooth Print"],
+      applications: ["Cafes", "Restaurants", "Petrol Pumps", "Mobile POS"],
       specifications: {
-        diameter: "110mm",
-        length: "100m",
+        diameter: "57mm",
+        length: "20 meters",
+        coreDiameter: "12mm",
+        gsm: "55-65",
+      },
+      icon: Package,
+      image: "/src/assets/57mm-20mtr.jpg",
+    },
+    {
+      name: "Thermal Roll 57mm × 25 mtr",
+      category: "57mm",
+      size: "57mm × 25 mtr",
+      description: "Long length thermal rolls for high-volume small format printing",
+      features: ["BPA Free", "High Quality", "Anti-Fade", "Smooth Print"],
+      applications: ["Busy Retail", "Food Courts", "Ticket Printing", "Receipt Printers"],
+      specifications: {
+        diameter: "57mm",
+        length: "25 meters",
+        coreDiameter: "12mm",
+        gsm: "55-65",
+      },
+      icon: Package,
+      image: "/src/assets/57mm-25mtr.jpg",
+    },
+    // 79mm SKUs
+    {
+      name: "Thermal Roll 79mm × 30 mtr",
+      category: "79mm",
+      size: "79mm × 30 mtr",
+      description: "Wide format thermal rolls for professional billing applications",
+      features: ["Extra Strong", "Heat Resistant", "Quick Print", "High Volume"],
+      applications: ["Supermarkets", "Hotels", "Large Retail", "Professional POS"],
+      specifications: {
+        diameter: "79mm",
+        length: "30 meters",
         coreDiameter: "12mm",
         gsm: "65-75",
       },
       icon: Shield,
-      price: "₹85-120 per roll",
+      image: "/src/assets/79mm-30mtr.jpg",
+    },
+    {
+      name: "Thermal Roll 79mm × 40 mtr",
+      category: "79mm",
+      size: "79mm × 40 mtr",
+      description: "Extended length wide format thermal rolls for high-volume printing",
+      features: ["Extra Strong", "Heat Resistant", "Quick Print", "High Volume"],
+      applications: ["Warehouses", "Manufacturing", "Bulk Retail", "Industrial POS"],
+      specifications: {
+        diameter: "79mm",
+        length: "40 meters", 
+        coreDiameter: "12mm",
+        gsm: "65-75",
+      },
+      icon: Shield,
+      image: "/src/assets/79mm-40mtr.jpg",
+    },
+    {
+      name: "Thermal Roll 79mm × 50 mtr",
+      category: "79mm",
+      size: "79mm × 50 mtr",
+      description: "Maximum length wide format thermal rolls for continuous high-volume operations",
+      features: ["Extra Strong", "Heat Resistant", "Quick Print", "High Volume"],
+      applications: ["Large Supermarkets", "Distribution Centers", "Heavy Industry", "Continuous Printing"],
+      specifications: {
+        diameter: "79mm",
+        length: "50 meters",
+        coreDiameter: "12mm",
+        gsm: "65-75",
+      },
+      icon: Shield,
+      image: "/src/assets/79mm-50mtr.jpg",
     },
   ];
 
@@ -87,36 +156,41 @@ const Products = () => {
           </div>
 
           {/* Products Grid */}
-          <div className="grid lg:grid-cols-3 gap-8 mb-20">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
             {products.map((product, index) => {
               const IconComponent = product.icon;
               return (
                 <Card key={index} className="hover:shadow-medium transition-all duration-300 group">
-                  <CardHeader className="text-center">
-                    <div className="mx-auto mb-4 p-4 bg-gradient-primary rounded-full w-fit group-hover:scale-110 transition-transform duration-300">
-                      <IconComponent className="h-8 w-8 text-primary-foreground" />
-                    </div>
-                    <CardTitle className="text-2xl">{product.name}</CardTitle>
-                    <CardDescription className="text-lg">
-                      <Badge variant="secondary" className="mb-3">
+                  <div className="relative h-48 overflow-hidden rounded-t-lg">
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                    <div className="absolute bottom-2 left-2 right-2">
+                      <Badge variant="secondary" className="bg-white/90 text-black">
                         <Ruler className="h-3 w-3 mr-1" />
                         {product.size}
                       </Badge>
-                      <div>{product.description}</div>
-                    </CardDescription>
+                    </div>
+                  </div>
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-lg">{product.name}</CardTitle>
+                    <CardDescription>{product.description}</CardDescription>
                   </CardHeader>
-                  <CardContent className="space-y-6">
+                  <CardContent className="space-y-4">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary mb-2">{product.price}</div>
-                      <div className="text-sm text-muted-foreground">Price may vary based on quantity</div>
+                      <div className="text-lg font-medium text-primary mb-1">Contact for Pricing</div>
+                      <div className="text-sm text-muted-foreground">Prices may vary based on quantity</div>
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-foreground mb-3">Key Features:</h4>
-                      <div className="grid grid-cols-2 gap-2">
+                      <h4 className="font-semibold text-foreground mb-2 text-sm">Key Features:</h4>
+                      <div className="grid grid-cols-2 gap-1">
                         {product.features.map((feature) => (
-                          <div key={feature} className="flex items-center text-sm">
-                            <CheckCircle className="h-3 w-3 text-green-500 mr-2" />
+                          <div key={feature} className="flex items-center text-xs">
+                            <CheckCircle className="h-3 w-3 text-green-500 mr-1" />
                             <span>{feature}</span>
                           </div>
                         ))}
@@ -124,8 +198,8 @@ const Products = () => {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-foreground mb-3">Specifications:</h4>
-                      <div className="space-y-2 text-sm">
+                      <h4 className="font-semibold text-foreground mb-2 text-sm">Specifications:</h4>
+                      <div className="space-y-1 text-xs">
                         <div className="flex justify-between">
                           <span className="text-muted-foreground">Diameter:</span>
                           <span>{product.specifications.diameter}</span>
@@ -146,9 +220,9 @@ const Products = () => {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-foreground mb-3">Best For:</h4>
+                      <h4 className="font-semibold text-foreground mb-2 text-sm">Best For:</h4>
                       <div className="flex flex-wrap gap-1">
-                        {product.applications.map((app) => (
+                        {product.applications.slice(0, 3).map((app) => (
                           <Badge key={app} variant="outline" className="text-xs">
                             {app}
                           </Badge>
