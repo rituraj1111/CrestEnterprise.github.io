@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import heroBgImg from "@/assets/hero-bg.jpg";
 
 const VideoHero = () => {
   return (
@@ -10,7 +11,7 @@ const VideoHero = () => {
         <div 
           className="w-full h-full bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/src/assets/hero-bg.jpg')`
+            backgroundImage: `url(${heroBgImg})`
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/70"></div>
@@ -32,7 +33,7 @@ const VideoHero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button asChild size="lg" className="bg-gradient-accent hover:opacity-90 text-lg px-8 py-3">
-                <Link to="/products">
+                <Link to="/contact">
                   Get Instant Quote <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
