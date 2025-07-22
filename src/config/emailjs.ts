@@ -8,7 +8,7 @@
 
 export const EMAILJS_CONFIG = {
   PUBLIC_KEY: 'Q5TBM4dqW1qJZF45a', // Replace with your EmailJS public key
-  SERVICE_ID: '1u8s_5RB9b16rXW-3A9DF', // Replace with your EmailJS service ID
+  SERVICE_ID: 'service_l6iz3yx', // Replace with your EmailJS service ID
   TEMPLATE_ID: 'FormSubmitTemplate', // Replace with your EmailJS template ID
   TO_EMAIL: 'enterprise.crest@gmail.com', // Company email address
 };
