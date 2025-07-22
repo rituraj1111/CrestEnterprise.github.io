@@ -24,8 +24,37 @@ const Contact = () => {
     message: "",
   });
 
+  const validateForm = () => {
+    // Email validation
+    if (!formData.email.includes('@') || !formData.email.includes('.')) {
+      toast({
+        title: "Invalid Email",
+        description: "Please enter a valid email address (e.g., name@company.com)",
+        variant: "destructive"
+      });
+      return false;
+    }
+
+    // Phone validation (10 digits)
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(formData.phone)) {
+      toast({
+        title: "Invalid Phone Number",
+        description: "Please enter a valid 10-digit mobile number",
+        variant: "destructive"
+      });
+      return false;
+    }
+
+    return true;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
     
     try {
       // Send email using EmailJS
@@ -214,9 +243,12 @@ const Contact = () => {
                         <Label htmlFor="phone">Phone Number *</Label>
                         <Input
                           id="phone"
+                          type="tel"
                           value={formData.phone}
                           onChange={(e) => handleChange("phone", e.target.value)}
-                          placeholder="9890479000"
+                          placeholder="Your mobile number"
+                          maxLength={10}
+                          pattern="[0-9]{10}"
                           required
                         />
                       </div>
