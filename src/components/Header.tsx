@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import QuoteModal from "./QuoteModal";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
   const location = useLocation();
 
   // Scroll to top when route changes
@@ -69,8 +71,12 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Button asChild variant="default" className="bg-gradient-accent hover:opacity-90">
-              <Link to="/contact">Get Quote</Link>
+            <Button 
+              onClick={() => setIsQuoteModalOpen(true)}
+              variant="default" 
+              className="bg-gradient-accent hover:opacity-90"
+            >
+              Get Quote
             </Button>
           </div>
 
@@ -101,15 +107,24 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button asChild className="bg-gradient-accent hover:opacity-90 w-fit">
-                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                  Get Quote
-                </Link>
+              <Button 
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  setIsQuoteModalOpen(true);
+                }}
+                className="bg-gradient-accent hover:opacity-90 w-fit"
+              >
+                Get Quote
               </Button>
             </div>
           </div>
         )}
       </nav>
+      
+      <QuoteModal 
+        isOpen={isQuoteModalOpen} 
+        onClose={() => setIsQuoteModalOpen(false)} 
+      />
     </header>
   );
 };

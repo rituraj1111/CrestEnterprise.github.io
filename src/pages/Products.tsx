@@ -167,12 +167,12 @@ const Products = () => {
             {products.map((product, index) => {
               const IconComponent = product.icon;
               return (
-                <Card key={index} className="hover:shadow-medium transition-all duration-300 group">
-                  <div className="relative h-48 overflow-hidden rounded-t-lg">
+                <Card key={index} className="h-[700px] flex flex-col hover:shadow-medium transition-all duration-300 group">
+                  <div className="relative h-64 overflow-hidden rounded-t-lg">
                     <img 
                       src={product.image} 
                       alt={product.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                     <div className="absolute bottom-2 left-2 right-2">
@@ -182,62 +182,64 @@ const Products = () => {
                       </Badge>
                     </div>
                   </div>
-                  <CardHeader className="pb-3">
+                  <CardHeader className="pb-3 flex-shrink-0">
                     <CardTitle className="text-lg">{product.name}</CardTitle>
                     <CardDescription>{product.description}</CardDescription>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="text-center">
-                      <div className="text-lg font-medium text-primary mb-1">Contact for Pricing</div>
-                      <div className="text-sm text-muted-foreground">Prices may vary based on quantity</div>
-                    </div>
+                  <CardContent className="flex-1 flex flex-col justify-between space-y-4">
+                    <div className="space-y-4">
+                      <div className="text-center">
+                        <div className="text-lg font-medium text-primary mb-1">Contact for Pricing</div>
+                        <div className="text-sm text-muted-foreground">Prices may vary based on quantity</div>
+                      </div>
 
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2 text-sm">Key Features:</h4>
-                      <div className="grid grid-cols-2 gap-1">
-                        {product.features.map((feature) => (
-                          <div key={feature} className="flex items-center text-xs">
-                            <CheckCircle className="h-3 w-3 text-green-500 mr-1" />
-                            <span>{feature}</span>
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-2 text-sm">Key Features:</h4>
+                        <div className="grid grid-cols-2 gap-1">
+                          {product.features.map((feature) => (
+                            <div key={feature} className="flex items-center text-xs">
+                              <CheckCircle className="h-3 w-3 text-green-500 mr-1 flex-shrink-0" />
+                              <span>{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-2 text-sm">Specifications:</h4>
+                        <div className="space-y-1 text-xs">
+                          <div className="flex justify-between">
+                            <span className="text-muted-foreground">Diameter:</span>
+                            <span>{product.specifications.diameter}</span>
                           </div>
-                        ))}
+                          <div className="flex justify-between">
+                            <span className="text-muted-foreground">Length:</span>
+                            <span>{product.specifications.length}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-muted-foreground">Core:</span>
+                            <span>{product.specifications.coreDiameter}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-muted-foreground">GSM:</span>
+                            <span>{product.specifications.gsm}</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-2 text-sm">Best For:</h4>
+                        <div className="flex flex-wrap gap-1">
+                          {product.applications.slice(0, 3).map((app) => (
+                            <Badge key={app} variant="outline" className="text-xs">
+                              {app}
+                            </Badge>
+                          ))}
+                        </div>
                       </div>
                     </div>
 
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2 text-sm">Specifications:</h4>
-                      <div className="space-y-1 text-xs">
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Diameter:</span>
-                          <span>{product.specifications.diameter}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Length:</span>
-                          <span>{product.specifications.length}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Core:</span>
-                          <span>{product.specifications.coreDiameter}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">GSM:</span>
-                          <span>{product.specifications.gsm}</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2 text-sm">Best For:</h4>
-                      <div className="flex flex-wrap gap-1">
-                        {product.applications.slice(0, 3).map((app) => (
-                          <Badge key={app} variant="outline" className="text-xs">
-                            {app}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-
-                    <Button asChild className="w-full bg-gradient-accent hover:opacity-90">
+                    <Button asChild className="w-full bg-gradient-accent hover:opacity-90 mt-auto">
                       <Link to="/contact">
                         Get Quote <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
