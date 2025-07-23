@@ -31,31 +31,28 @@ const ProductDetailModal = ({ product, isOpen, onClose }: ProductDetailModalProp
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
-        <DialogHeader className="flex flex-row items-center justify-between">
+      <DialogContent className="max-w-7xl max-h-[95vh] overflow-hidden">
+        <DialogHeader>
           <DialogTitle className="text-2xl font-bold">{product.name}</DialogTitle>
-          <Button variant="ghost" size="sm" onClick={onClose}>
-            <X className="h-4 w-4" />
-          </Button>
         </DialogHeader>
         
-        <div className="grid lg:grid-cols-2 gap-8 mt-6">
-          {/* Left side - Image */}
-          <div className="space-y-4">
-            <div className="relative rounded-lg overflow-hidden bg-muted">
+        <div className="grid lg:grid-cols-3 gap-6 mt-4 h-[75vh]">
+          {/* Left side - Large Image */}
+          <div className="lg:col-span-2 flex flex-col">
+            <div className="relative rounded-lg overflow-hidden bg-muted flex-1">
               <img 
                 src={product.image} 
                 alt={product.name}
-                className="w-full h-96 object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
-            <Badge variant="secondary" className="text-lg px-4 py-2">
+            <Badge variant="secondary" className="text-lg px-4 py-2 mt-4 self-start">
               {product.size}
             </Badge>
           </div>
           
-          {/* Right side - Details */}
-          <div className="space-y-6">
+          {/* Right side - Compact Details */}
+          <div className="flex flex-col space-y-4 overflow-y-auto">
             <div>
               <h3 className="text-xl font-semibold mb-2">Description</h3>
               <p className="text-muted-foreground">{product.description}</p>
