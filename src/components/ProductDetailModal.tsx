@@ -31,12 +31,12 @@ const ProductDetailModal = ({ product, isOpen, onClose }: ProductDetailModalProp
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-7xl max-h-[95vh] overflow-hidden">
+      <DialogContent className="max-w-sm sm:max-w-2xl lg:max-w-6xl max-h-[85vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold">{product.name}</DialogTitle>
+          <DialogTitle className="text-xl lg:text-2xl font-bold">{product.name}</DialogTitle>
         </DialogHeader>
         
-        <div className="grid lg:grid-cols-3 gap-6 mt-4 h-[75vh]">
+        <div className="grid lg:grid-cols-3 gap-4 lg:gap-6 mt-4">
           {/* Left side - Large Image */}
           <div className="lg:col-span-2 flex flex-col">
             <div className="relative rounded-lg overflow-hidden bg-muted flex-1">
