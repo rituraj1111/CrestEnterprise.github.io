@@ -3,9 +3,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Ruler, Package, Zap, Shield, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ProductDetailModal from "@/components/ProductDetailModal";
 import img57mm13mtr from "@/assets/57mm-13mtr.jpg";
 import img57mm15mtr from "@/assets/57mm-15mtr.jpg";
 import img57mm20mtr from "@/assets/57mm-20mtr.jpg";
@@ -15,9 +16,17 @@ import img79mm40mtr from "@/assets/79mm-40mtr.jpg";
 import img79mm50mtr from "@/assets/79mm-50mtr.jpg";
 
 const Products = () => {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
   const products = [
     // 57mm SKUs
     {
@@ -167,16 +176,20 @@ const Products = () => {
             {products.map((product, index) => {
               const IconComponent = product.icon;
               return (
-                <Card key={index} className="h-[700px] flex flex-col hover:shadow-medium transition-all duration-300 group">
-                  <div className="relative h-64 overflow-hidden rounded-t-lg">
+                <Card 
+                  key={index} 
+                  className="h-[700px] flex flex-col hover:shadow-medium transition-all duration-300 group cursor-pointer"
+                  onClick={() => handleProductClick(product)}
+                >
+                  <div className="relative h-80 overflow-hidden rounded-t-lg">
                     <img 
                       src={product.image} 
                       alt={product.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                    <div className="absolute bottom-2 left-2 right-2">
-                      <Badge variant="secondary" className="bg-white/90 text-black">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                    <div className="absolute bottom-3 left-3 right-3">
+                      <Badge variant="secondary" className="bg-white/95 text-black text-sm px-3 py-1">
                         <Ruler className="h-3 w-3 mr-1" />
                         {product.size}
                       </Badge>
@@ -239,10 +252,14 @@ const Products = () => {
                       </div>
                     </div>
 
-                    <Button asChild className="w-full bg-gradient-accent hover:opacity-90 mt-auto">
-                      <Link to="/contact">
-                        Get Quote <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
+                    <Button 
+                      className="w-full bg-gradient-accent hover:opacity-90 mt-auto"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleProductClick(product);
+                      }}
+                    >
+                      View Details <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </CardContent>
                 </Card>
@@ -296,6 +313,12 @@ const Products = () => {
 
         </div>
       </main>
+
+      <ProductDetailModal 
+        product={selectedProduct}
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
 
       <Footer />
     </div>

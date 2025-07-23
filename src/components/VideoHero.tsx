@@ -38,7 +38,7 @@ const VideoHero = () => {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-8 py-3">
-                <Link to="/contact">Emergency Orders</Link>
+                <Link to="/products">View Products</Link>
               </Button>
             </div>
           </div>
