@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import img57mm13mtr from "@/assets/57mm-13mtr.jpg";
 import img57mm15mtr from "@/assets/57mm-15mtr.jpg";
 import img57mm20mtr from "@/assets/57mm-20mtr.jpg";
-import img57mm25mtr from "@/assets/57mm-25mtr.jpg";
+import img57mm25mtr from "@/assets/57mm*15Mtr.jpeg";
 import img79mm30mtr from "@/assets/79mm-30mtr.jpg";
 import img79mm40mtr from "@/assets/79mm-40mtr.jpg";
 import img79mm50mtr from "@/assets/79mm-50mtr.jpg";
@@ -40,7 +40,7 @@ const Products = () => {
       name: "Thermal Roll 57mm × 15 mtr",
       category: "57mm",
       size: "57mm × 15 mtr", 
-      description: "Standard thermal rolls for regular POS applications",
+      description: "Standard thermal rolls for regular POS applications and handheld devices",
       features: ["BPA Free", "High Quality", "Anti-Fade", "Smooth Print"],
       applications: ["Retail Stores", "Small Businesses", "ATM Machines", "Card Machines"],
       specifications: {

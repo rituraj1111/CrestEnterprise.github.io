@@ -8,9 +8,9 @@ const AchievementsSection = () => {
   });
 
   const targets = {
-    customers: 10000,
-    experience: 19,
-    deliveries: 50
+    customers: 1000,
+    experience: 9,
+    deliveries: 5
   };
 
   useEffect(() => {
@@ -64,7 +64,7 @@ const AchievementsSection = () => {
             </div>
             <div className="text-lg font-medium text-foreground mb-2">Years Experience</div>
             <div className="text-sm text-muted-foreground">
-              Industry expertise since 2005
+              Industry expertise since 2015
             </div>
           </div>
           
