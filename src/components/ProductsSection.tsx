@@ -2,13 +2,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Package } from "lucide-react";
 import { Link } from "react-router-dom";
-import React, { memo } from "react";
 import billingMachinesImg from "@/assets/billing-machines.jpg";
 import thermalRollsImg from "@/assets/thermal-rolls.jpg";
 import img57mmCategory from "@/assets/57mm-category.jpg";
 import img79mmCategory from "@/assets/79mm-category.jpg";
 
-const ProductsSection = memo(() => {
+const ProductsSection = () => {
   const thermalRollCategories = [
     {
       id: "57mm",
@@ -52,7 +51,6 @@ const ProductsSection = memo(() => {
                 src={billingMachinesImg} 
                 alt="Billing machines setup" 
                 className="w-full h-full object-cover"
-                loading="lazy"
               />
             </div>
             <CardContent className="p-6">
@@ -67,7 +65,6 @@ const ProductsSection = memo(() => {
                 src={thermalRollsImg} 
                 alt="Thermal paper rolls collection" 
                 className="w-full h-full object-cover"
-                loading="lazy"
               />
             </div>
             <CardContent className="p-6">
@@ -89,7 +86,6 @@ const ProductsSection = memo(() => {
                       src={category.image} 
                       alt={category.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4 text-white">
@@ -137,8 +133,6 @@ const ProductsSection = memo(() => {
       </div>
     </section>
   );
-});
-
-ProductsSection.displayName = 'ProductsSection';
+};
 
 export default ProductsSection;

@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Fuel, Hotel, ShoppingCart, Building2, Utensils, MapPin } from "lucide-react";
-import React, { memo } from "react";
 import petrolPumpImage from "@/assets/petrol-pump.jpg";
 import supermarketImage from "@/assets/supermarket.jpg";
 import hotelImage from "@/assets/hotel.jpg";
@@ -8,7 +7,7 @@ import corporateImage from "@/assets/corporate.jpg";
 import foodCourtImage from "@/assets/food-court.jpg";
 import transportImage from "@/assets/transport.jpg";
 
-const CustomersSection = memo(() => {
+const CustomersSection = () => {
   const customerSegments = [
     {
       name: "Petrol Pumps",
@@ -90,7 +89,6 @@ const CustomersSection = memo(() => {
                       src={segment.image} 
                       alt={segment.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
                     />
                   </div>
                 )}
@@ -145,8 +143,6 @@ const CustomersSection = memo(() => {
       </div>
     </section>
   );
-});
-
-CustomersSection.displayName = 'CustomersSection';
+};
 
 export default CustomersSection;
