@@ -1,8 +1,9 @@
+import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, ArrowRight, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { CheckCircle, ArrowRight } from "lucide-react";
+import QuoteModal from "./QuoteModal";
 
 interface Product {
   name: string;
@@ -27,6 +28,8 @@ interface ProductDetailModalProps {
 }
 
 const ProductDetailModal = ({ product, isOpen, onClose }: ProductDetailModalProps) => {
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+  
   if (!product) return null;
 
   return (
@@ -109,15 +112,21 @@ const ProductDetailModal = ({ product, isOpen, onClose }: ProductDetailModalProp
                 <div className="text-sm text-muted-foreground">Competitive rates for bulk orders</div>
               </div>
               
-              <Button asChild className="w-full bg-gradient-accent hover:opacity-90 text-lg py-3">
-                <Link to="/contact" onClick={onClose}>
-                  Get Quote <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+              <Button 
+                onClick={() => setIsQuoteModalOpen(true)}
+                className="w-full bg-gradient-accent hover:opacity-90 text-lg py-3"
+              >
+                Get Quote <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
           </div>
         </div>
       </DialogContent>
+      
+      <QuoteModal 
+        isOpen={isQuoteModalOpen} 
+        onClose={() => setIsQuoteModalOpen(false)} 
+      />
     </Dialog>
   );
 };
