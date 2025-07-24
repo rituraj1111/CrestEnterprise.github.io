@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Package } from "lucide-react";
 import { Link } from "react-router-dom";
-import { memo } from "react";
+import React, { memo } from "react";
 import billingMachinesImg from "@/assets/billing-machines.jpg";
 import thermalRollsImg from "@/assets/thermal-rolls.jpg";
 import img57mmCategory from "@/assets/57mm-category.jpg";

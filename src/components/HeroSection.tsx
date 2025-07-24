@@ -1,7 +1,7 @@
 import { ArrowRight, CheckCircle, Users, Award, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { memo } from "react";
+import React, { memo } from "react";
 import heroImage from "@/assets/hero-creative.jpg";
 
 const HeroSection = memo(() => {

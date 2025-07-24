@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Fuel, Hotel, ShoppingCart, Building2, Utensils, MapPin } from "lucide-react";
-import { memo } from "react";
+import React, { memo } from "react";
 import petrolPumpImage from "@/assets/petrol-pump.jpg";
 import supermarketImage from "@/assets/supermarket.jpg";
 import hotelImage from "@/assets/hotel.jpg";

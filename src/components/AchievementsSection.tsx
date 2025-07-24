@@ -1,4 +1,4 @@
-import { useEffect, useState, memo } from "react";
+import React, { useEffect, useState, memo } from "react";
 
 const AchievementsSection = memo(() => {
   const [counters, setCounters] = useState({
