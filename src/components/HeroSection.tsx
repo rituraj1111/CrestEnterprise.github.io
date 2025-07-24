@@ -1,9 +1,10 @@
 import { ArrowRight, CheckCircle, Users, Award, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { memo } from "react";
 import heroImage from "@/assets/hero-creative.jpg";
 
-const HeroSection = () => {
+const HeroSection = memo(() => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
@@ -11,6 +12,7 @@ const HeroSection = () => {
           src={heroImage} 
           alt="Thermal Paper Solutions" 
           className="w-full h-full object-cover"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60"></div>
       </div>
@@ -56,6 +58,8 @@ const HeroSection = () => {
       </div>
     </section>
   );
-};
+});
+
+HeroSection.displayName = 'HeroSection';
 
 export default HeroSection;

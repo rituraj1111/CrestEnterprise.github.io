@@ -1,7 +1,7 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, ArrowRight, X } from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface Product {
@@ -31,89 +31,96 @@ const ProductDetailModal = ({ product, isOpen, onClose }: ProductDetailModalProp
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-sm sm:max-w-2xl lg:max-w-6xl max-h-[85vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle className="text-xl lg:text-2xl font-bold">{product.name}</DialogTitle>
-        </DialogHeader>
-        
-        <div className="grid lg:grid-cols-3 gap-4 lg:gap-6 mt-4">
-          {/* Left side - Large Image */}
-          <div className="lg:col-span-2 flex flex-col">
-            <div className="relative rounded-lg overflow-hidden bg-muted flex-1">
-              <img 
-                src={product.image} 
-                alt={product.name}
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <Badge variant="secondary" className="text-lg px-4 py-2 mt-4 self-start">
-              {product.size}
-            </Badge>
+      <DialogContent className="w-[95vw] max-w-6xl h-[95vh] max-h-[95vh] p-0 overflow-hidden">
+        <div className="h-full flex flex-col">
+          {/* Header */}
+          <div className="p-4 pb-2 border-b bg-muted/30">
+            <DialogTitle className="text-lg sm:text-xl lg:text-2xl font-bold pr-8">{product.name}</DialogTitle>
           </div>
           
-          {/* Right side - Compact Details */}
-          <div className="flex flex-col space-y-4 overflow-y-auto">
-            <div>
-              <h3 className="text-xl font-semibold mb-2">Description</h3>
-              <p className="text-muted-foreground">{product.description}</p>
+          <div className="flex-1 flex flex-col lg:flex-row overflow-hidden">
+            {/* Left side - Large Image (70% on desktop, 40% on mobile) */}
+            <div className="lg:flex-[7] flex-[4] flex flex-col p-4 bg-muted/20">
+              <div className="relative rounded-lg overflow-hidden bg-background flex-1 min-h-0 flex items-center justify-center">
+                <img 
+                  src={product.image} 
+                  alt={product.name}
+                  className="max-w-full max-h-full object-contain"
+                  loading="eager"
+                />
+              </div>
+              <Badge variant="secondary" className="text-sm sm:text-base px-3 py-2 mt-3 self-start">
+                {product.size}
+              </Badge>
             </div>
             
-            <div>
-              <h3 className="text-xl font-semibold mb-3">Key Features</h3>
-              <div className="grid grid-cols-2 gap-2">
-                {product.features.map((feature) => (
-                  <div key={feature} className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                    <span className="text-sm">{feature}</span>
+            {/* Right side - Details (30% on desktop, 60% on mobile) */}
+            <div className="lg:flex-[3] flex-[6] flex flex-col p-4 overflow-y-auto bg-background">
+              <div className="space-y-4 flex-1">
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Description</h3>
+                  <p className="text-muted-foreground text-sm">{product.description}</p>
+                </div>
+                
+                <div>
+                  <h3 className="text-lg font-semibold mb-3">Key Features</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {product.features.map((feature) => (
+                      <div key={feature} className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                        <span className="text-sm">{feature}</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-semibold mb-3">Specifications</h3>
-              <div className="bg-muted/50 rounded-lg p-4 space-y-2">
-                <div className="flex justify-between">
-                  <span className="font-medium">Diameter:</span>
-                  <span>{product.specifications.diameter}</span>
                 </div>
-                <div className="flex justify-between">
-                  <span className="font-medium">Length:</span>
-                  <span>{product.specifications.length}</span>
+                
+                <div>
+                  <h3 className="text-lg font-semibold mb-3">Specifications</h3>
+                  <div className="bg-muted/50 rounded-lg p-3 space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="font-medium">Diameter:</span>
+                      <span>{product.specifications.diameter}</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="font-medium">Length:</span>
+                      <span>{product.specifications.length}</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="font-medium">Core Diameter:</span>
+                      <span>{product.specifications.coreDiameter}</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="font-medium">GSM:</span>
+                      <span>{product.specifications.gsm}</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex justify-between">
-                  <span className="font-medium">Core Diameter:</span>
-                  <span>{product.specifications.coreDiameter}</span>
+                
+                <div>
+                  <h3 className="text-lg font-semibold mb-3">Best Applications</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {product.applications.map((app) => (
+                      <Badge key={app} variant="outline" className="text-xs">
+                        {app}
+                      </Badge>
+                    ))}
+                  </div>
                 </div>
-                <div className="flex justify-between">
-                  <span className="font-medium">GSM:</span>
-                  <span>{product.specifications.gsm}</span>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-semibold mb-3">Best Applications</h3>
-              <div className="flex flex-wrap gap-2">
-                {product.applications.map((app) => (
-                  <Badge key={app} variant="outline">
-                    {app}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-            
-            <div className="pt-4 border-t">
-              <div className="text-center mb-4">
-                <div className="text-xl font-bold text-primary mb-2">Contact for Pricing</div>
-                <div className="text-sm text-muted-foreground">Competitive rates for bulk orders</div>
               </div>
               
-              <Button asChild className="w-full bg-gradient-accent hover:opacity-90 text-lg py-3">
-                <Link to="/contact" onClick={onClose}>
-                  Get Quote <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
+              {/* Fixed bottom section */}
+              <div className="pt-4 border-t mt-auto">
+                <div className="text-center mb-4">
+                  <div className="text-lg font-bold text-primary mb-1">Contact for Pricing</div>
+                  <div className="text-xs text-muted-foreground">Competitive rates for bulk orders</div>
+                </div>
+                
+                <Button asChild className="w-full bg-gradient-accent hover:opacity-90 text-sm sm:text-base py-2">
+                  <Link to="/contact" onClick={onClose}>
+                    Get Quote <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>

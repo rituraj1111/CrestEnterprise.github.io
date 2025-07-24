@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Ruler, Package, Zap, Shield, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo, useCallback } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProductDetailModal from "@/components/ProductDetailModal";
@@ -23,11 +23,12 @@ const Products = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleProductClick = (product) => {
+  const handleProductClick = useCallback((product) => {
     setSelectedProduct(product);
     setIsModalOpen(true);
-  };
-  const products = [
+  }, []);
+  
+  const products = useMemo(() => [
     // 57mm SKUs
     {
       name: "Thermal Roll 57mm × 13 mtr",
@@ -142,7 +143,7 @@ const Products = () => {
       icon: Shield,
       image: img79mm50mtr,
     },
-  ];
+  ], []);
 
   const qualityFeatures = [
     "Premium Quality Manufacturing",
@@ -178,82 +179,54 @@ const Products = () => {
               return (
                 <Card 
                   key={index} 
-                  className="h-[700px] flex flex-col hover:shadow-medium transition-all duration-300 group cursor-pointer"
+                  className="flex flex-col hover:shadow-medium transition-all duration-300 group cursor-pointer h-fit"
                   onClick={() => handleProductClick(product)}
                 >
-                  <div className="relative h-80 overflow-hidden rounded-t-lg">
+                  {/* Large Image Section - Takes 70% of card height */}
+                  <div className="relative h-64 sm:h-72 md:h-80 overflow-hidden rounded-t-lg">
                     <img 
                       src={product.image} 
                       alt={product.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
+                      className="w-full h-full object-contain bg-muted group-hover:scale-105 transition-transform duration-300 ease-out"
+                      loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                    <div className="absolute bottom-3 left-3 right-3">
-                      <Badge variant="secondary" className="bg-white/95 text-black text-sm px-3 py-1">
+                    <div className="absolute top-3 left-3">
+                      <Badge variant="secondary" className="bg-white/95 text-black text-sm px-3 py-1 shadow-lg">
                         <Ruler className="h-3 w-3 mr-1" />
                         {product.size}
                       </Badge>
                     </div>
                   </div>
-                  <CardHeader className="pb-3 flex-shrink-0">
-                    <CardTitle className="text-lg">{product.name}</CardTitle>
-                    <CardDescription>{product.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="flex-1 flex flex-col justify-between space-y-4">
-                    <div className="space-y-4">
-                      <div className="text-center">
-                        <div className="text-lg font-medium text-primary mb-1">Contact for Pricing</div>
-                        <div className="text-sm text-muted-foreground">Prices may vary based on quantity</div>
-                      </div>
-
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-2 text-sm">Key Features:</h4>
-                        <div className="grid grid-cols-2 gap-1">
-                          {product.features.map((feature) => (
-                            <div key={feature} className="flex items-center text-xs">
-                              <CheckCircle className="h-3 w-3 text-green-500 mr-1 flex-shrink-0" />
-                              <span>{feature}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-2 text-sm">Specifications:</h4>
-                        <div className="space-y-1 text-xs">
-                          <div className="flex justify-between">
-                            <span className="text-muted-foreground">Diameter:</span>
-                            <span>{product.specifications.diameter}</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span className="text-muted-foreground">Length:</span>
-                            <span>{product.specifications.length}</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span className="text-muted-foreground">Core:</span>
-                            <span>{product.specifications.coreDiameter}</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span className="text-muted-foreground">GSM:</span>
-                            <span>{product.specifications.gsm}</span>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-2 text-sm">Best For:</h4>
-                        <div className="flex flex-wrap gap-1">
-                          {product.applications.slice(0, 3).map((app) => (
-                            <Badge key={app} variant="outline" className="text-xs">
-                              {app}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
+                  
+                  {/* Compact Content Section - Takes 30% */}
+                  <div className="p-4 space-y-3">
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground mb-1">{product.name}</h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2">{product.description}</p>
                     </div>
-
+                    
+                    {/* Key Features - Horizontal Layout */}
+                    <div className="flex flex-wrap gap-1">
+                      {product.features.slice(0, 4).map((feature) => (
+                        <Badge key={feature} variant="outline" className="text-xs px-2 py-0.5">
+                          {feature}
+                        </Badge>
+                      ))}
+                    </div>
+                    
+                    {/* Quick Specs */}
+                    <div className="flex justify-between items-center text-xs text-muted-foreground">
+                      <span>Length: {product.specifications.length}</span>
+                      <span>GSM: {product.specifications.gsm}</span>
+                    </div>
+                    
+                    {/* Contact for Pricing */}
+                    <div className="text-center py-2">
+                      <div className="text-sm font-medium text-primary">Contact for Pricing</div>
+                    </div>
+                    
                     <Button 
-                      className="w-full bg-gradient-accent hover:opacity-90 mt-auto"
+                      className="w-full bg-gradient-accent hover:opacity-90"
                       onClick={(e) => {
                         e.stopPropagation();
                         handleProductClick(product);
@@ -261,7 +234,7 @@ const Products = () => {
                     >
                       View Details <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
-                  </CardContent>
+                  </div>
                 </Card>
               );
             })}

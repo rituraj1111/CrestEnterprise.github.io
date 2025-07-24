@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 
-const AchievementsSection = () => {
+const AchievementsSection = memo(() => {
   const [counters, setCounters] = useState({
     customers: 0,
     experience: 0,
@@ -81,6 +81,8 @@ const AchievementsSection = () => {
       </div>
     </section>
   );
-};
+});
+
+AchievementsSection.displayName = 'AchievementsSection';
 
 export default AchievementsSection;
