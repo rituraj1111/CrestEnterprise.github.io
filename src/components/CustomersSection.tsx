@@ -131,7 +131,7 @@ const CustomersSection = () => {
               <div className="text-sm opacity-75">Customer Support</div>
             </div>
             <div>
-              <div className="text-3xl font-bold">2-3days</div>
+              <div className="text-3xl font-bold">2-3Days</div>
               <div className="text-sm opacity-75">Quick Delivery</div>
             </div>
             <div>
