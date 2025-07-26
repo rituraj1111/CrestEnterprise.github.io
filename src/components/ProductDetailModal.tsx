@@ -49,9 +49,9 @@ const ProductDetailModal = ({ product, isOpen, onClose }: ProductDetailModalProp
                 className="w-full h-full object-contain"
               />
             </div>
-            <Badge variant="secondary" className="text-lg px-4 py-2 mt-4 self-start">
+            {/*<Badge variant="secondary" className="text-lg px-4 py-2 mt-4 self-start">
               {product.size}
-            </Badge>
+            </Badge>*/}
           </div>
           
           {/* Right side - Compact Details */}

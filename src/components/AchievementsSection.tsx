@@ -8,9 +8,9 @@ const AchievementsSection = () => {
   });
 
   const targets = {
-    customers: 1000,
-    experience: 9,
-    deliveries: 5
+    customers: 10000,
+    experience: 10,
+    deliveries: 50
   };
 
   useEffect(() => {

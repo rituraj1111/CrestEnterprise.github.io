@@ -11,7 +11,7 @@ const About = () => {
     { year: "2018", title: "Production Scale-up", description: "Expanded manufacturing capacity to meet growing demand" },
     { year: "2020", title: "Pan-India Expansion", description: "Expanded operations to serve customers across India" },
     { year: "2022", title: "Digital Transformation", description: "Modernized manufacturing with latest technology" },
-    { year: "2024", title: "1000+ Clients", description: "Reached milestone of serving 1000+ satisfied customers" },
+    { year: "2024", title: "10,000+ Clients", description: "Reached milestone of serving 10,000+ satisfied customers" },
   ];
 
   const values = [
@@ -71,7 +71,7 @@ const About = () => {
               <span className="bg-gradient-accent bg-clip-text text-transparent">Crest Enterprise</span>
             </h1>
              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-               Leading the thermal paper industry with 9+ years of excellence, innovation, and unwavering commitment to quality since 2015.
+               Leading the thermal paper industry with 10+ years of excellence, innovation, and unwavering commitment to quality since 2015.
              </p>
           </div>
 
@@ -91,7 +91,7 @@ const About = () => {
                   that every thermal paper roll meets the highest industry standards.
                 </p>
                 <p>
-                  Today, we proudly serve over 1000 businesses across various industries, from small 
+                  Today, we proudly serve over 10,000 businesses across various industries, from small 
                   retail stores to large supermarket chains, helping them streamline their printing 
                   operations with our premium thermal paper products.
                 </p>
@@ -103,15 +103,15 @@ const About = () => {
             <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">9+</div>
+                  <div className="text-4xl font-bold text-primary mb-2">10+</div>
                   <div className="text-sm text-muted-foreground">Years of Excellence</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">1000+</div>
+                  <div className="text-4xl font-bold text-primary mb-2">10,000+</div>
                   <div className="text-sm text-muted-foreground">Happy Clients</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">5M+</div>
+                  <div className="text-4xl font-bold text-primary mb-2">50M+</div>
                   <div className="text-sm text-muted-foreground">Rolls Manufactured</div>
                 </div>
                 <div className="text-center">
