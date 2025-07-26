@@ -7,13 +7,13 @@ import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProductDetailModal from "@/components/ProductDetailModal";
-import img57mm13mtr from "@/assets/57mm-13mtr.jpg";
+import img57mm13mtr from "@/assets/57*13mtr.png";
 import img57mm15mtr from "@/assets/57mm-15mtr.jpg";
-import img57mm20mtr from "@/assets/57mm-20mtr.jpg";
-import img57mm25mtr from "@/assets/57mm*15Mtr.jpeg";
+import img57mm20mtr from "@/assets/57*20mtr.jpeg";
+import img57mm25mtr from "@/assets/57*25mtr.jpeg";
 import img79mm30mtr from "@/assets/79*30mtr.png";
-import img79mm40mtr from "@/assets/79mm-40mtr.jpg";
-import img79mm50mtr from "@/assets/79mm-50mtr.jpg";
+import img79mm40mtr from "@/assets/79*40mtr.jpeg";
+import img79mm50mtr from "@/assets/79*50mtr.png";
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
