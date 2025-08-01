@@ -4,6 +4,7 @@ import { Award, Users, Factory, Truck, Shield, CheckCircle } from "lucide-react"
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Helmet } from 'react-helmet';
 
 const About = () => {
   const milestones = [
@@ -59,40 +60,45 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>About Crest Enterprise | Thermal Paper Billing Rolls in Maharashtra, India</title>
+        <meta name="description" content="Learn about Crest Enterprise, a leading supplier of thermal paper billing rolls, POS machine rolls, and billing paper in Sangli, Maharashtra, India." />
+        <meta name="keywords" content="about crest enterprise, thermal paper billing rolls, POS machine rolls, Sangli, Maharashtra, India, billing paper, receipt rolls" />
+        <meta name="geo.region" content="IN-MH" />
+        <meta name="geo.placename" content="Sangli, Maharashtra, India" />
+      </Helmet>
       <Header />
-      
       <main className="py-20">
         <div className="container mx-auto px-4">
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              About{" "}
+              About{' '}
               <span className="bg-gradient-accent bg-clip-text text-transparent">Crest Enterprise</span>
             </h1>
-             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-               Leading the thermal paper industry with 10+ years of excellence, innovation, and unwavering commitment to quality since 2015.
-             </p>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Leading the thermal paper industry with 10+ years of excellence, innovation, and unwavering commitment to quality since 2015.
+            </p>
           </div>
-
           {/* Company Story */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Our Story</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Founded in 2015, Crest Enterprise began with a simple mission: to provide businesses 
-                  across India with reliable, high-quality thermal paper solutions. What started as a 
+                  Founded in 2015, Crest Enterprise began with a simple mission: to provide businesses
+                  across India with reliable, high-quality thermal paper solutions. What started as a
                   small manufacturing unit has grown into one of the leading thermal paper suppliers in the country.
                 </p>
                 <p>
-                  Over the years, we've built our reputation on the foundation of quality, reliability, 
-                  and exceptional customer service. Our state-of-the-art manufacturing facility ensures 
+                  Over the years, we've built our reputation on the foundation of quality, reliability,
+                  and exceptional customer service. Our state-of-the-art manufacturing facility ensures
                   that every thermal paper roll meets the highest industry standards.
                 </p>
                 <p>
-                  Today, we proudly serve over 10,000 businesses across various industries, from small 
-                  retail stores to large supermarket chains, helping them streamline their printing 
+                  Today, we proudly serve over 10,000 businesses across various industries, from small
+                  retail stores to large supermarket chains, helping them streamline their printing
                   operations with our premium thermal paper products.
                 </p>
               </div>
@@ -121,7 +127,6 @@ const About = () => {
               </div>
             </div>
           </div>
-
           {/* Our Values */}
           <div className="mb-20">
             <div className="text-center mb-12">
@@ -147,7 +152,6 @@ const About = () => {
               })}
             </div>
           </div>
-
           {/* Timeline */}
           <div className="mb-20">
             <div className="text-center mb-12">
@@ -170,14 +174,12 @@ const About = () => {
               ))}
             </div>
           </div>
-
-
         </div>
       </main>
-
       <Footer />
-    </div>
+    </>
   );
 };
+// ...existing code...
 
 export default About;

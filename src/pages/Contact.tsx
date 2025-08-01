@@ -11,6 +11,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from "@/config/emailjs";
+import { Helmet } from 'react-helmet';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -25,7 +26,6 @@ const Contact = () => {
   });
 
   const validateForm = () => {
-    // Email validation
     if (!formData.email.includes('@') || !formData.email.includes('.')) {
       toast({
         title: "Invalid Email",
@@ -34,8 +34,6 @@ const Contact = () => {
       });
       return false;
     }
-
-    // Phone validation (10 digits)
     const phoneRegex = /^\d{10}$/;
     if (!phoneRegex.test(formData.phone)) {
       toast({
@@ -45,19 +43,19 @@ const Contact = () => {
       });
       return false;
     }
-
     return true;
+  };
+
+  const handleChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (!validateForm()) {
       return;
     }
-    
     try {
-      // Send email using EmailJS
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
@@ -68,19 +66,16 @@ const Contact = () => {
         message: formData.message || 'No additional message',
         to_email: EMAILJS_CONFIG.TO_EMAIL,
       };
-
       await emailjs.send(
         EMAILJS_CONFIG.SERVICE_ID,
         EMAILJS_CONFIG.TEMPLATE_ID,
         templateParams,
         EMAILJS_CONFIG.PUBLIC_KEY
       );
-
       toast({
         title: "Enquiry Sent Successfully!",
         description: "Thank you for your enquiry. We will get back to you within 24 hours.",
       });
-      
       setFormData({
         name: "",
         email: "",
@@ -92,8 +87,6 @@ const Contact = () => {
       });
     } catch (error) {
       console.error('EmailJS Error:', error);
-      
-      // Fallback to mailto if EmailJS fails
       const subject = encodeURIComponent(`Enquiry from ${formData.name} - ${formData.company || 'Individual'}`);
       const body = encodeURIComponent(
         `Name: ${formData.name}\n` +
@@ -104,10 +97,8 @@ const Contact = () => {
         `Quantity: ${formData.quantity || 'N/A'}\n\n` +
         `Message:\n${formData.message || 'No additional message'}`
       );
-      
       const mailtoLink = `mailto:${EMAILJS_CONFIG.TO_EMAIL}?subject=${subject}&body=${body}`;
       window.open(mailtoLink, '_blank');
-      
       toast({
         title: "Opening Email Client",
         description: "EmailJS is not configured. Your default email client will open to send the enquiry.",
@@ -115,27 +106,28 @@ const Contact = () => {
     }
   };
 
-  const handleChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-  };
-
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>Contact Crest Enterprise | Thermal Paper Billing Rolls Supplier Sangli</title>
+        <meta name="description" content="Contact Crest Enterprise for thermal paper billing rolls, POS machine rolls, and billing paper in Sangli, Maharashtra, and nearby districts." />
+        <meta name="keywords" content="contact crest enterprise, thermal paper billing rolls, POS machine rolls, Sangli, Maharashtra, India, billing paper, Kolhapur, Satara, Solapur, Miraj" />
+        <meta name="geo.region" content="IN-MH" />
+        <meta name="geo.placename" content="Sangli, Maharashtra, India" />
+      </Helmet>
       <Header />
-      
       <main className="py-20">
         <div className="container mx-auto px-4">
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold text-foreground mb-4">
-              Get in{" "}
+              Get in{' '}
               <span className="bg-gradient-accent bg-clip-text text-transparent">Touch</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Ready to discuss your thermal paper needs? We're here to help you find the perfect solution for your business.
             </p>
           </div>
-
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
@@ -150,7 +142,6 @@ const Contact = () => {
                   </CardDescription>
                 </CardHeader>
               </Card>
-
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="bg-primary/10 p-3 rounded-lg">
@@ -162,7 +153,6 @@ const Contact = () => {
                     <p className="text-sm text-muted-foreground">Mon-Sat: 9AM-6PM</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="bg-primary/10 p-3 rounded-lg">
                     <Mail className="h-6 w-6 text-primary" />
@@ -173,20 +163,18 @@ const Contact = () => {
                     <p className="text-sm text-muted-foreground">We reply within 24 hours</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="bg-primary/10 p-3 rounded-lg">
                     <MapPin className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Address</h3>
-                     <p className="text-muted-foreground">
-                       Kupwad, Sangli 416 416<br />
-                       Maharashtra, India
-                     </p>
+                    <p className="text-muted-foreground">
+                      Kupwad, Sangli 416 416<br />
+                      Maharashtra, India
+                    </p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="bg-primary/10 p-3 rounded-lg">
                     <Clock className="h-6 w-6 text-primary" />
@@ -202,7 +190,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-
             {/* Enquiry Form */}
             <div className="lg:col-span-2">
               <Card className="shadow-medium">
@@ -237,7 +224,6 @@ const Contact = () => {
                         />
                       </div>
                     </div>
-
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="phone">Phone Number *</Label>
@@ -262,7 +248,6 @@ const Contact = () => {
                         />
                       </div>
                     </div>
-
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="product-type">Product Type *</Label>
@@ -292,7 +277,6 @@ const Contact = () => {
                         />
                       </div>
                     </div>
-
                     <div className="space-y-2">
                       <Label htmlFor="message">Message</Label>
                       <Textarea
@@ -303,7 +287,6 @@ const Contact = () => {
                         rows={5}
                       />
                     </div>
-
                     <Button type="submit" className="w-full bg-gradient-accent hover:opacity-90" size="lg">
                       <Send className="h-5 w-5 mr-2" />
                       Submit Enquiry
@@ -313,12 +296,10 @@ const Contact = () => {
               </Card>
             </div>
           </div>
-
         </div>
       </main>
-
       <Footer />
-    </div>
+    </>
   );
 };
 

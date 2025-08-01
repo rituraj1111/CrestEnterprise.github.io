@@ -3,18 +3,37 @@
   <url>
     <loc>https://crestthermalrolls.com/</loc>
     <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://crestthermalrolls.com/about</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://crestthermalrolls.com/products</loc>
     <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://crestthermalrolls.com/contact</loc>
     <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
   </url>
-  <!-- Add more product URLs as needed -->
+  <!-- Example product URLs for local SEO and AI search -->
+  <url>
+    <loc>https://crestthermalrolls.com/products/thermal-paper-billing-rolls-sangli</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://crestthermalrolls.com/products/pos-machine-rolls-maharashtra</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://crestthermalrolls.com/products/billing-paper-india</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
