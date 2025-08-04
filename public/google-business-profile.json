@@ -1,0 +1,76 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Crest Enterprise",
+  "description": "Leading supplier of thermal paper billing rolls, POS machine paper, and receipt rolls in Sangli, Maharashtra, India",
+  "url": "https://crestthermalrolls.com",
+  "telephone": "+91-XXXXXXXXXX",
+  "email": "info@crestthermalrolls.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Your Address",
+    "addressLocality": "Sangli",
+    "addressRegion": "Maharashtra",
+    "postalCode": "416416",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "16.8524",
+    "longitude": "74.5815"
+  },
+  "openingHours": [
+    "Mo-Sa 09:00-18:00"
+  ],
+  "priceRange": "$$",
+  "image": "https://crestthermalrolls.com/thermal-paper-story.jpg",
+  "logo": "https://crestthermalrolls.com/thermal-paper-story.jpg",
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": "16.8524",
+      "longitude": "74.5815"
+    },
+    "geoRadius": "100000"
+  },
+  "areaServed": [
+    "Sangli, Maharashtra, India",
+    "Kolhapur, Maharashtra, India", 
+    "Satara, Maharashtra, India",
+    "Pune, Maharashtra, India",
+    "Solapur, Maharashtra, India",
+    "Miraj, Maharashtra, India"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Thermal Paper Products",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Thermal Paper Billing Rolls 57mm",
+          "category": "POS Supplies"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product", 
+          "name": "Thermal Paper Billing Rolls 79mm",
+          "category": "POS Supplies"
+        }
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "150"
+  },
+  "sameAs": [
+    "https://www.facebook.com/crestthermalrolls",
+    "https://www.instagram.com/crestthermalrolls"
+  ]
+}

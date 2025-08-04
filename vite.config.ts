@@ -8,7 +8,17 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
-    historyApiFallback: true, // Enable SPA routing for client-side routes like /products
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-card', '@radix-ui/react-button'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
   },
   plugins: [
     react(),

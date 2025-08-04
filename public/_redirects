@@ -1,0 +1,9 @@
+# Handle client-side routing for SPA
+/*    /index.html   200
+
+# SEO-friendly redirects for common searches
+/thermal-paper-billing-rolls-sangli   /products   200
+/pos-machine-rolls-maharashtra        /products   200
+/billing-paper-india                  /products   200
+/thermal-rolls-kolhapur               /products   200
+/billing-machine-paper                /products   200

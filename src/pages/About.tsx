@@ -62,11 +62,51 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Crest Enterprise | Thermal Paper Billing Rolls in Maharashtra, India</title>
-        <meta name="description" content="Learn about Crest Enterprise, a leading supplier of thermal paper billing rolls, POS machine rolls, and billing paper in Sangli, Maharashtra, India." />
-        <meta name="keywords" content="about crest enterprise, thermal paper billing rolls, POS machine rolls, Sangli, Maharashtra, India, billing paper, receipt rolls" />
+        <title>About Crest Enterprise | Leading Thermal Paper Supplier Sangli Maharashtra | Company Profile</title>
+        <meta name="description" content="Established thermal paper supplier since 2015. Crest Enterprise manufactures premium billing rolls, POS machine paper in Sangli, Maharashtra. Serving Kolhapur, Satara, Pune districts with 99.9% quality assurance." />
+        <meta name="keywords" content="about crest enterprise, thermal paper manufacturer, billing rolls supplier, POS machine rolls, Sangli company, Maharashtra thermal paper, billing paper manufacturer, receipt rolls supplier, established 2015, quality assurance" />
         <meta name="geo.region" content="IN-MH" />
         <meta name="geo.placename" content="Sangli, Maharashtra, India" />
+        <meta name="geo.position" content="16.8524;74.5815" />
+        <meta name="ICBM" content="16.8524, 74.5815" />
+        <meta property="og:title" content="About Crest Enterprise | Leading Thermal Paper Supplier Maharashtra" />
+        <meta property="og:description" content="Established thermal paper manufacturer since 2015. Premium billing rolls and POS machine paper supplier in Sangli, Maharashtra." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://crestthermalrolls.com/about" />
+        <meta property="og:image" content="https://crestthermalrolls.com/thermal-paper-story.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Crest Enterprise | Thermal Paper Manufacturer" />
+        <meta name="twitter:description" content="Established thermal paper manufacturer since 2015 in Sangli, Maharashtra, India." />
+        <link rel="canonical" href="https://crestthermalrolls.com/about" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Crest Enterprise",
+            "foundingDate": "2015",
+            "url": "https://crestthermalrolls.com",
+            "logo": "https://crestthermalrolls.com/thermal-paper-story.jpg",
+            "description": "Leading manufacturer and supplier of thermal paper billing rolls, POS machine paper, and receipt rolls since 2015",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Sangli",
+              "addressRegion": "Maharashtra",
+              "addressCountry": "IN",
+              "postalCode": "416416"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+91-XXXXXXXXXX",
+              "contactType": "customer service",
+              "areaServed": "IN",
+              "availableLanguage": ["English", "Hindi", "Marathi"]
+            },
+            "sameAs": [
+              "https://www.facebook.com/crestthermalrolls",
+              "https://www.instagram.com/crestthermalrolls"
+            ]
+          }
+        `}</script>
       </Helmet>
       <Header />
       <main className="py-20">

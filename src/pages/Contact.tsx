@@ -109,11 +109,43 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Crest Enterprise | Thermal Paper Billing Rolls Supplier Sangli</title>
-        <meta name="description" content="Contact Crest Enterprise for thermal paper billing rolls, POS machine rolls, and billing paper in Sangli, Maharashtra, and nearby districts." />
-        <meta name="keywords" content="contact crest enterprise, thermal paper billing rolls, POS machine rolls, Sangli, Maharashtra, India, billing paper, Kolhapur, Satara, Solapur, Miraj" />
+        <title>Contact Crest Enterprise | Get Quote for Thermal Paper Billing Rolls | Sangli Maharashtra</title>
+        <meta name="description" content="Contact Crest Enterprise for bulk orders, quotes on thermal paper billing rolls, POS machine paper in Sangli, Kolhapur, Satara, Pune, Maharashtra. Call +91-XXXXXXXXXX for instant quote and fast delivery." />
+        <meta name="keywords" content="contact crest enterprise, thermal paper supplier contact, billing rolls quote, POS machine rolls price, Sangli supplier, Maharashtra thermal paper, bulk order, instant quote, fast delivery, customer support" />
         <meta name="geo.region" content="IN-MH" />
         <meta name="geo.placename" content="Sangli, Maharashtra, India" />
+        <meta name="geo.position" content="16.8524;74.5815" />
+        <meta name="ICBM" content="16.8524, 74.5815" />
+        <meta property="og:title" content="Contact Crest Enterprise | Thermal Paper Supplier Sangli Maharashtra" />
+        <meta property="og:description" content="Get instant quotes for thermal paper billing rolls and POS machine paper. Fast delivery across Maharashtra, India." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://crestthermalrolls.com/contact" />
+        <meta property="og:image" content="https://crestthermalrolls.com/thermal-paper-story.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Crest Enterprise | Thermal Paper Supplier" />
+        <meta name="twitter:description" content="Get instant quotes for thermal paper billing rolls in Maharashtra, India." />
+        <link rel="canonical" href="https://crestthermalrolls.com/contact" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact Crest Enterprise",
+            "description": "Contact page for Crest Enterprise - thermal paper billing rolls supplier",
+            "url": "https://crestthermalrolls.com/contact",
+            "mainEntity": {
+              "@type": "LocalBusiness",
+              "name": "Crest Enterprise",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Sangli",
+                "addressRegion": "Maharashtra",
+                "addressCountry": "IN"
+              },
+              "telephone": "+91-XXXXXXXXXX",
+              "email": "info@crestthermalrolls.com"
+            }
+          }
+        `}</script>
       </Helmet>
       <Header />
       <main className="py-20">

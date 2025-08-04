@@ -1,38 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://crestthermalrolls.com/</loc>
+    <lastmod>2024-01-15</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://crestthermalrolls.com/about</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://crestthermalrolls.com/thermal-paper-story.jpg</image:loc>
+      <image:title>Crest Enterprise Thermal Paper Rolls</image:title>
+      <image:caption>Premium thermal paper billing rolls for POS systems</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://crestthermalrolls.com/products</loc>
+    <lastmod>2024-01-15</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
+    <image:image>
+      <image:loc>https://crestthermalrolls.com/thermal-paper-story.jpg</image:loc>
+      <image:title>Thermal Paper Products</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://crestthermalrolls.com/about</loc>
+    <lastmod>2024-01-15</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://crestthermalrolls.com/contact</loc>
+    <lastmod>2024-01-15</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
-  <!-- Example product URLs for local SEO and AI search -->
+  
+  <!-- Local SEO URLs for specific keywords -->
   <url>
-    <loc>https://crestthermalrolls.com/products/thermal-paper-billing-rolls-sangli</loc>
+    <loc>https://crestthermalrolls.com/thermal-paper-billing-rolls-sangli</loc>
+    <lastmod>2024-01-15</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://crestthermalrolls.com/products/pos-machine-rolls-maharashtra</loc>
+    <loc>https://crestthermalrolls.com/pos-machine-rolls-maharashtra</loc>
+    <lastmod>2024-01-15</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://crestthermalrolls.com/products/billing-paper-india</loc>
+    <loc>https://crestthermalrolls.com/billing-paper-india</loc>
+    <lastmod>2024-01-15</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://crestthermalrolls.com/thermal-rolls-kolhapur</loc>
+    <lastmod>2024-01-15</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://crestthermalrolls.com/billing-machine-paper-satara</loc>
+    <lastmod>2024-01-15</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://crestthermalrolls.com/pos-paper-pune</loc>
+    <lastmod>2024-01-15</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://crestthermalrolls.com/57mm-thermal-paper-rolls</loc>
+    <lastmod>2024-01-15</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://crestthermalrolls.com/79mm-thermal-paper-rolls</loc>
+    <lastmod>2024-01-15</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>

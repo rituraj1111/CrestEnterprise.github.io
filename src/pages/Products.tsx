@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProductDetailModal from "@/components/ProductDetailModal";
+import { Helmet } from 'react-helmet';
 import img57mm13mtr from "@/assets/57*13mtr.png";
 import img57mm15mtr from "@/assets/57*15mtr.jpeg";
 import img57mm20mtr from "@/assets/57*20mtr.jpeg";
@@ -154,8 +155,63 @@ const Products = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <>
+      <Helmet>
+        <title>Thermal Paper Billing Rolls | POS Machine Paper | Crest Enterprise Maharashtra</title>
+        <meta name="description" content="Buy thermal paper billing rolls, POS machine paper, receipt rolls for billing machines in Sangli, Kolhapur, Satara, Pune, Maharashtra. 57mm, 79mm sizes available. Fast delivery across India." />
+        <meta name="keywords" content="thermal paper billing rolls, POS machine paper, receipt rolls, billing machine paper, thermal paper rolls, POS paper, Sangli, Kolhapur, Satara, Pune, Maharashtra, India, 57mm thermal paper, 79mm thermal paper, billing rolls supplier" />
+        <meta name="geo.region" content="IN-MH" />
+        <meta name="geo.placename" content="Sangli, Maharashtra, India" />
+        <meta name="geo.position" content="16.8524;74.5815" />
+        <meta name="ICBM" content="16.8524, 74.5815" />
+        <meta property="og:title" content="Thermal Paper Billing Rolls | POS Machine Paper | Crest Enterprise" />
+        <meta property="og:description" content="Premium thermal paper rolls for POS systems, billing machines. Available in 57mm, 79mm sizes. Fast delivery in Maharashtra, India." />
+        <meta property="og:type" content="product" />
+        <meta property="og:url" content="https://crestthermalrolls.com/products" />
+        <meta property="og:image" content="/thermal-paper-story.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Thermal Paper Billing Rolls | POS Machine Paper" />
+        <meta name="twitter:description" content="Premium thermal paper rolls for POS systems and billing machines in Maharashtra, India." />
+        <link rel="canonical" href="https://crestthermalrolls.com/products" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Thermal Paper Billing Rolls",
+            "description": "High-quality thermal paper rolls for POS systems, billing machines, and receipt printers",
+            "brand": {
+              "@type": "Brand",
+              "name": "Crest Enterprise"
+            },
+            "manufacturer": {
+              "@type": "Organization",
+              "name": "Crest Enterprise",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Sangli",
+                "addressRegion": "Maharashtra",
+                "addressCountry": "IN"
+              }
+            },
+            "offers": {
+              "@type": "AggregateOffer",
+              "availability": "https://schema.org/InStock",
+              "priceCurrency": "INR",
+              "seller": {
+                "@type": "Organization",
+                "name": "Crest Enterprise"
+              }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "150"
+            }
+          }
+        `}</script>
+      </Helmet>
+      <div className="min-h-screen bg-background">
+        <Header />
       
       <main className="py-20">
         <div className="container mx-auto px-4">
@@ -320,8 +376,9 @@ const Products = () => {
         onClose={() => setIsModalOpen(false)}
       />
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 
