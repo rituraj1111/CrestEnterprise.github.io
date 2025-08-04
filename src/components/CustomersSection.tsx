@@ -1,11 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Fuel, Hotel, ShoppingCart, Building2, Utensils, MapPin } from "lucide-react";
-import petrolPumpImage from "@/assets/petrol-pump.jpg";
-import supermarketImage from "@/assets/supermarket.jpg";
-import hotelImage from "@/assets/hotel.jpg";
-import corporateImage from "@/assets/corporate.jpg";
-import foodCourtImage from "@/assets/food-court.jpg";
-import transportImage from "@/assets/transport.jpg";
+import petrolPumpImage from "@/assets/petrol-pump.webp";
+import supermarketImage from "@/assets/supermarket.webp";
+import hotelImage from "@/assets/hotel.webp";
+import corporateImage from "@/assets/corporate.webp";
+import foodCourtImage from "@/assets/food-court.webp";
+import transportImage from "@/assets/transport.webp";
 
 const CustomersSection = () => {
   const customerSegments = [

@@ -2,10 +2,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Package } from "lucide-react";
 import { Link } from "react-router-dom";
-import billingMachinesImg from "@/assets/billing-machines.jpg";
-import thermalRollsImg from "@/assets/thermal-rolls.jpg";
-import img57mmCategory from "@/assets/57mm-category.jpg";
-import img79mmCategory from "@/assets/79mm-category.jpg";
+import billingMachinesImg from "@/assets/billing-machines.webp";
+import thermalRollsImg from "@/assets/thermal-rolls.webp";
+import img57mmCategory from "@/assets/57mm-category.webp";
+import img79mmCategory from "@/assets/79mm-category.webp";
 
 const ProductsSection = () => {
   const thermalRollCategories = [
