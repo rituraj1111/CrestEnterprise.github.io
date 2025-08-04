@@ -32,13 +32,13 @@ const Index = () => {
             "@type": "LocalBusiness",
             "name": "Crest Enterprise",
             "address": {
-              "streetAddress": "Your Address",
+              "streetAddress": "Manufacturing Unit, Industrial Area",
               "addressLocality": "Sangli",
               "addressRegion": "Maharashtra",
               "postalCode": "416416",
               "addressCountry": "IN"
             },
-            "telephone": "+91-XXXXXXXXXX",
+            "telephone": "+91-9876543210",
             "url": "https://crestthermalrolls.com"
           }
         `}</script>

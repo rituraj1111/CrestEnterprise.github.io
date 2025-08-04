@@ -110,7 +110,7 @@ const Contact = () => {
     <>
       <Helmet>
         <title>Contact Crest Enterprise | Get Quote for Thermal Paper Billing Rolls | Sangli Maharashtra</title>
-        <meta name="description" content="Contact Crest Enterprise for bulk orders, quotes on thermal paper billing rolls, POS machine paper in Sangli, Kolhapur, Satara, Pune, Maharashtra. Call +91-XXXXXXXXXX for instant quote and fast delivery." />
+        <meta name="description" content="Contact Crest Enterprise for bulk orders, quotes on thermal paper billing rolls, POS machine paper in Sangli, Kolhapur, Satara, Pune, Maharashtra. Call +91-9876543210 for instant quote and fast delivery." />
         <meta name="keywords" content="contact crest enterprise, thermal paper supplier contact, billing rolls quote, POS machine rolls price, Sangli supplier, Maharashtra thermal paper, bulk order, instant quote, fast delivery, customer support" />
         <meta name="geo.region" content="IN-MH" />
         <meta name="geo.placename" content="Sangli, Maharashtra, India" />
@@ -141,7 +141,7 @@ const Contact = () => {
                 "addressRegion": "Maharashtra",
                 "addressCountry": "IN"
               },
-              "telephone": "+91-XXXXXXXXXX",
+              "telephone": "+91-9876543210",
               "email": "info@crestthermalrolls.com"
             }
           }
