@@ -38,7 +38,7 @@ const Index = () => {
               "postalCode": "416416",
               "addressCountry": "IN"
             },
-            "telephone": "+91-9876543210",
+            "telephone": "+91-9890479000",
             "url": "https://crestthermalrolls.com"
           }
         `}</script>
