@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InternalLinks from "@/components/InternalLinks";
 import ProductDetailModal from "@/components/ProductDetailModal";
 import { Helmet } from 'react-helmet';
 import img57mm13mtr from "@/assets/57*13mtr.webp";
@@ -368,6 +369,7 @@ const Products = () => {
           </div>
 
         </div>
+        <InternalLinks />
       </main>
 
       <ProductDetailModal 

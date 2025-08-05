@@ -4,6 +4,7 @@ import VideoHero from "@/components/VideoHero";
 import ProductsSection from "@/components/ProductsSection";
 import CustomersSection from "@/components/CustomersSection";
 import AchievementsSection from "@/components/AchievementsSection";
+import InternalLinks from "@/components/InternalLinks";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -32,14 +33,58 @@ const Index = () => {
             "@type": "LocalBusiness",
             "name": "Crest Enterprise",
             "address": {
-              "streetAddress": "Manufacturing Unit, Industrial Area",
+              "streetAddress": "Kupwad",
               "addressLocality": "Sangli",
               "addressRegion": "Maharashtra",
               "postalCode": "416416",
               "addressCountry": "IN"
             },
             "telephone": "+91-9890479000",
-            "url": "https://crestthermalrolls.com"
+            "email": "enterprise.crest@gmail.com",
+            "url": "https://crestthermalrolls.com",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "16.8524",
+              "longitude": "74.5815"
+            },
+            "openingHours": "Mo-Sa 09:00-18:00",
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Sangli",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Maharashtra"
+                }
+              },
+              {
+                "@type": "City", 
+                "name": "Kolhapur",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Maharashtra"
+                }
+              },
+              {
+                "@type": "City",
+                "name": "Satara", 
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Maharashtra"
+                }
+              },
+              {
+                "@type": "City",
+                "name": "Pune",
+                "containedInPlace": {
+                  "@type": "State", 
+                  "name": "Maharashtra"
+                }
+              }
+            ],
+            "sameAs": [
+              "https://www.google.com/maps/place/Crest+Enterprise"
+            ]
           }
         `}</script>
       </Helmet>
@@ -50,6 +95,7 @@ const Index = () => {
           <ProductsSection />
           <CustomersSection />
           <AchievementsSection />
+          <InternalLinks />
         </main>
         <Footer />
       </div>

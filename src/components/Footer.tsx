@@ -32,18 +32,56 @@ const Footer = () => {
             <h4 className="text-lg font-semibold">Quick Links</h4>
             <nav className="flex flex-col space-y-2">
               <Link to="/" className="text-sm opacity-90 hover:opacity-100 transition-opacity">
-                Home
+                Home - Thermal Paper Rolls
               </Link>
               <Link to="/products" className="text-sm opacity-90 hover:opacity-100 transition-opacity">
-                Products
+                Products - Billing Rolls & POS Paper
               </Link>
               <Link to="/about" className="text-sm opacity-90 hover:opacity-100 transition-opacity">
-                About Us
+                About - Company Profile
               </Link>
               <Link to="/contact" className="text-sm opacity-90 hover:opacity-100 transition-opacity">
-                Contact
+                Contact - Get Quote
               </Link>
             </nav>
+            
+            {/* Product Category Links */}
+            <div className="mt-6">
+              <h5 className="text-md font-medium mb-2">Product Categories</h5>
+              <nav className="flex flex-col space-y-1">
+                <Link to="/products" className="text-xs opacity-75 hover:opacity-100 transition-opacity">
+                  57mm Thermal Paper Rolls
+                </Link>
+                <Link to="/products" className="text-xs opacity-75 hover:opacity-100 transition-opacity">
+                  79mm Thermal Paper Rolls
+                </Link>
+                <Link to="/products" className="text-xs opacity-75 hover:opacity-100 transition-opacity">
+                  POS Machine Rolls
+                </Link>
+                <Link to="/products" className="text-xs opacity-75 hover:opacity-100 transition-opacity">
+                  Billing Machine Paper
+                </Link>
+              </nav>
+            </div>
+            
+            {/* Location Based Links */}
+            <div className="mt-4">
+              <h5 className="text-md font-medium mb-2">Service Areas</h5>
+              <nav className="flex flex-col space-y-1">
+                <Link to="/contact" className="text-xs opacity-75 hover:opacity-100 transition-opacity">
+                  Thermal Paper Sangli
+                </Link>
+                <Link to="/contact" className="text-xs opacity-75 hover:opacity-100 transition-opacity">
+                  Billing Rolls Kolhapur
+                </Link>
+                <Link to="/contact" className="text-xs opacity-75 hover:opacity-100 transition-opacity">
+                  POS Paper Satara
+                </Link>
+                <Link to="/contact" className="text-xs opacity-75 hover:opacity-100 transition-opacity">
+                  Thermal Rolls Pune
+                </Link>
+              </nav>
+            </div>
           </div>
 
           {/* Contact Info */}
