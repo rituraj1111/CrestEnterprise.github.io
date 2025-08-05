@@ -45,42 +45,13 @@ const Footer = () => {
               </Link>
             </nav>
             
-            {/* Product Category Links */}
-            <div className="mt-6">
-              <h5 className="text-md font-medium mb-2">Product Categories</h5>
-              <nav className="flex flex-col space-y-1">
-                <Link to="/products" className="text-xs opacity-75 hover:opacity-100 transition-opacity">
-                  57mm Thermal Paper Rolls
-                </Link>
-                <Link to="/products" className="text-xs opacity-75 hover:opacity-100 transition-opacity">
-                  79mm Thermal Paper Rolls
-                </Link>
-                <Link to="/products" className="text-xs opacity-75 hover:opacity-100 transition-opacity">
-                  POS Machine Rolls
-                </Link>
-                <Link to="/products" className="text-xs opacity-75 hover:opacity-100 transition-opacity">
-                  Billing Machine Paper
-                </Link>
-              </nav>
-            </div>
-            
-            {/* Location Based Links */}
+            {/* Service Areas */}
             <div className="mt-4">
               <h5 className="text-md font-medium mb-2">Service Areas</h5>
-              <nav className="flex flex-col space-y-1">
-                <Link to="/contact" className="text-xs opacity-75 hover:opacity-100 transition-opacity">
-                  Thermal Paper Sangli
-                </Link>
-                <Link to="/contact" className="text-xs opacity-75 hover:opacity-100 transition-opacity">
-                  Billing Rolls Kolhapur
-                </Link>
-                <Link to="/contact" className="text-xs opacity-75 hover:opacity-100 transition-opacity">
-                  POS Paper Satara
-                </Link>
-                <Link to="/contact" className="text-xs opacity-75 hover:opacity-100 transition-opacity">
-                  Thermal Rolls Pune
-                </Link>
-              </nav>
+              <div className="text-xs opacity-75 space-y-1">
+                <span className="block">Sangli • Solapur • Kolhapur</span>
+                <span className="block">Satara • Pune • Goa</span>
+              </div>
             </div>
           </div>
 

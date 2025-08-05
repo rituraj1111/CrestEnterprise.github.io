@@ -1,9 +1,15 @@
+# URL formatting redirects
+/PRODUCTS     /products     301
+/ABOUT        /about        301
+/CONTACT      /contact      301
+/HOME         /             301
+
 # SEO-friendly redirects for common searches
-/thermal-paper-billing-rolls-sangli   /products   200
-/pos-machine-rolls-maharashtra        /products   200
-/billing-paper-india                  /products   200
-/thermal-rolls-kolhapur               /products   200
-/billing-machine-paper                /products   200
+/thermal-paper-billing-rolls-sangli   /products   301
+/pos-machine-rolls-maharashtra        /products   301
+/billing-paper-india                  /products   301
+/thermal-rolls-kolhapur               /products   301
+/billing-machine-paper                /products   301
 
 # Handle client-side routing for SPA
 /about    /index.html   200
