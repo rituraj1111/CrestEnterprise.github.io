@@ -6,10 +6,9 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Clock, Send, MessageSquare } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Truck, Shield } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import InternalLinks from "@/components/InternalLinks";
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from "@/config/emailjs";
 import { Helmet } from 'react-helmet';
@@ -330,7 +329,32 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <InternalLinks />
+          {/* Enhanced Contact Features */}
+          <div className="mt-16 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 rounded-2xl p-8">
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div className="space-y-2">
+                <div className="bg-primary text-primary-foreground rounded-full p-3 w-fit mx-auto">
+                  <Phone className="h-6 w-6" />
+                </div>
+                <h3 className="font-semibold text-foreground">Quick Response</h3>
+                <p className="text-sm text-muted-foreground">We respond to all inquiries within 2 hours during business days</p>
+              </div>
+              <div className="space-y-2">
+                <div className="bg-primary text-primary-foreground rounded-full p-3 w-fit mx-auto">
+                  <Truck className="h-6 w-6" />
+                </div>
+                <h3 className="font-semibold text-foreground">Fast Delivery</h3>
+                <p className="text-sm text-muted-foreground">Same-day dispatch for orders placed before 2 PM</p>
+              </div>
+              <div className="space-y-2">
+                <div className="bg-primary text-primary-foreground rounded-full p-3 w-fit mx-auto">
+                  <Shield className="h-6 w-6" />
+                </div>
+                <h3 className="font-semibold text-foreground">Quality Guarantee</h3>
+                <p className="text-sm text-muted-foreground">100% quality assurance with hassle-free returns</p>
+              </div>
+            </div>
+          </div>
       </main>
       <Footer />
     </>

@@ -1,10 +1,10 @@
 import { Helmet } from 'react-helmet';
+import { CheckCircle, Truck, Shield } from "lucide-react";
 import Header from "@/components/Header";
 import VideoHero from "@/components/VideoHero";
 import ProductsSection from "@/components/ProductsSection";
 import CustomersSection from "@/components/CustomersSection";
 import AchievementsSection from "@/components/AchievementsSection";
-import InternalLinks from "@/components/InternalLinks";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -95,7 +95,30 @@ const Index = () => {
           <ProductsSection />
           <CustomersSection />
           <AchievementsSection />
-          <InternalLinks />
+          <div className="bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 py-12 rounded-2xl mb-8">
+            <div className="container mx-auto px-4 text-center">
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="flex items-center justify-center space-x-3">
+                  <div className="bg-primary text-primary-foreground rounded-full p-2">
+                    <CheckCircle className="h-5 w-5" />
+                  </div>
+                  <span className="text-foreground font-medium">Premium Quality</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3">
+                  <div className="bg-primary text-primary-foreground rounded-full p-2">
+                    <Truck className="h-5 w-5" />
+                  </div>
+                  <span className="text-foreground font-medium">Fast Delivery</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3">
+                  <div className="bg-primary text-primary-foreground rounded-full p-2">
+                    <Shield className="h-5 w-5" />
+                  </div>
+                  <span className="text-foreground font-medium">BPA Free</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </main>
         <Footer />
       </div>

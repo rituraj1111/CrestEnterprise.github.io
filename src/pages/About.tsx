@@ -216,7 +216,31 @@ const About = () => {
             </div>
           </div>
         </div>
-        <InternalLinks />
+          {/* Enhanced Manufacturing Excellence */}
+          <div className="bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 rounded-2xl p-8 mb-12">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl font-bold text-foreground mb-2">Manufacturing Excellence</h2>
+              <p className="text-muted-foreground">State-of-the-art facility ensuring consistent quality</p>
+            </div>
+            <div className="grid md:grid-cols-4 gap-6 text-center">
+              <div className="space-y-2">
+                <div className="text-2xl font-bold text-primary">ISO</div>
+                <div className="text-sm text-muted-foreground">Certified Quality</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-2xl font-bold text-primary">24x7</div>
+                <div className="text-sm text-muted-foreground">Production Support</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-2xl font-bold text-primary">Zero</div>
+                <div className="text-sm text-muted-foreground">Waste Policy</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-2xl font-bold text-primary">100%</div>
+                <div className="text-sm text-muted-foreground">Automated Testing</div>
+              </div>
+            </div>
+          </div>
       </main>
       <Footer />
     </>

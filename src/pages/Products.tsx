@@ -369,7 +369,21 @@ const Products = () => {
           </div>
 
         </div>
-        <InternalLinks />
+          {/* Enhanced Call to Action */}
+          <div className="bg-gradient-to-r from-primary via-accent to-primary text-primary-foreground rounded-2xl p-12 text-center">
+            <h2 className="text-3xl font-bold mb-4">Ready to Order?</h2>
+            <p className="text-lg mb-6 opacity-90">
+              Get instant quotes and fast delivery for all your thermal paper needs
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild variant="secondary" size="lg" className="bg-white text-primary hover:bg-white/90">
+                <Link to="/contact">Get Quote Now</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+                <Link to="/about">Learn More</Link>
+              </Button>
+            </div>
+          </div>
       </main>
 
       <ProductDetailModal 
