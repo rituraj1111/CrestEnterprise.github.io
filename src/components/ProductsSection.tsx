@@ -51,6 +51,11 @@ const ProductsSection = () => {
                 src={billingMachinesImg} 
                 alt="Billing machines setup" 
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+                width="1024"
+                height="692"
+                sizes="(min-width: 1024px) 50vw, 100vw"
               />
             </div>
             <CardContent className="p-6">
@@ -65,6 +70,11 @@ const ProductsSection = () => {
                 src={thermalRollsImg} 
                 alt="Thermal paper rolls collection" 
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+                width="800"
+                height="541"
+                sizes="(min-width: 1024px) 50vw, 100vw"
               />
             </div>
             <CardContent className="p-6">
@@ -86,6 +96,11 @@ const ProductsSection = () => {
                       src={category.image} 
                       alt={category.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                      decoding="async"
+                      width="800"
+                      height="541"
+                      sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4 text-white">

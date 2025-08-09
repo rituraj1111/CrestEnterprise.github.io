@@ -7,13 +7,15 @@ const VideoHero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0">
-        <div 
-          className="w-full h-full bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url(${heroBgImg})`
-          }}
-        ></div>
+      <div className="absolute inset-0" aria-hidden="true">
+        <img 
+          src={heroBgImg}
+          alt="Thermal paper rolls background"
+          className="w-full h-full object-cover"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/70"></div>
       </div>
 
@@ -45,9 +47,9 @@ const VideoHero = () => {
           
           <div className="relative">
             <div className="bg-card/40 backdrop-blur-sm rounded-2xl p-8 shadow-soft border border-border/50">
-              <h3 className="text-2xl font-semibold text-foreground mb-4 text-center">
+              <h2 className="text-2xl font-semibold text-foreground mb-4 text-center">
                 Your Reliable Thermal Paper Partner
-              </h3>
+              </h2>
               <div className="space-y-3 text-muted-foreground">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-accent rounded-full"></div>

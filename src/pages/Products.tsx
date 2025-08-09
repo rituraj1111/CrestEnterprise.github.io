@@ -217,7 +217,8 @@ const Products = () => {
               const IconComponent = product.icon;
               return <Card key={index} className="h-[700px] flex flex-col hover:shadow-medium transition-all duration-300 group cursor-pointer" onClick={() => handleProductClick(product)}>
                   <div className="relative h-80 overflow-hidden rounded-t-lg">
-                    <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out" />
+                    <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out" 
+                      loading="lazy" decoding="async" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                     <div className="absolute bottom-3 left-3 right-3">
                       <Badge variant="secondary" className="bg-white/95 text-black text-sm px-3 py-1">

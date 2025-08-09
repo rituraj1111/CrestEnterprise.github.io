@@ -42,9 +42,9 @@ const HeroSection = () => {
           
           <div className="relative">
             <div className="bg-card/30 backdrop-blur-sm rounded-2xl p-8 shadow-soft">
-              <h3 className="text-2xl font-semibold text-foreground mb-4 text-center">
+              <h2 className="text-2xl font-semibold text-foreground mb-4 text-center">
                 Trusted Partner for Thermal Solutions
-              </h3>
+              </h2>
               <p className="text-muted-foreground text-center leading-relaxed">
                 We specialize in manufacturing high-quality thermal paper rolls 
                 that meet the diverse needs of businesses across India. Our commitment 

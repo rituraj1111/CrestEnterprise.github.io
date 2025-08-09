@@ -89,6 +89,11 @@ const CustomersSection = () => {
                       src={segment.image} 
                       alt={segment.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                      decoding="async"
+                      width="1024"
+                      height="517"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                     />
                   </div>
                 )}

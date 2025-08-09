@@ -1,4 +1,5 @@
 // Performance monitoring utilities
+import heroBg from '@/assets/hero-bg.webp';
 export const measurePerformance = () => {
   if (typeof window !== 'undefined' && 'performance' in window) {
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -61,11 +62,12 @@ export const preloadCriticalResources = () => {
     fontLink.crossOrigin = 'anonymous';
     document.head.appendChild(fontLink);
 
-    // Preload hero image
+    // Preload hero image (LCP)
     const heroImageLink = document.createElement('link');
     heroImageLink.rel = 'preload';
-    heroImageLink.href = '/thermal-paper-story.jpg';
     heroImageLink.as = 'image';
+    heroImageLink.href = heroBg;
+    heroImageLink.setAttribute('fetchpriority', 'high');
     document.head.appendChild(heroImageLink);
   }
 };

@@ -86,6 +86,9 @@ const Header = () => {
             size="icon"
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
@@ -93,7 +96,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border pt-4">
+          <div id="mobile-menu" role="navigation" aria-label="Mobile navigation" className="md:hidden mt-4 pb-4 border-t border-border pt-4">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <Link
