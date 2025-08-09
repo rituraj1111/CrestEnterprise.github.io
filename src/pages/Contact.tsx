@@ -125,6 +125,8 @@ const Contact = () => {
         <meta name="twitter:title" content="Contact Crest Enterprise | Thermal Paper Supplier" />
         <meta name="twitter:description" content="Get instant quotes for thermal paper billing rolls in Maharashtra, India." />
         <link rel="canonical" href="https://crestthermalrolls.com/contact" />
+        <link rel="alternate" hrefLang="en-in" href="https://crestthermalrolls.com/contact" />
+        <link rel="alternate" hrefLang="x-default" href="https://crestthermalrolls.com/contact" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",

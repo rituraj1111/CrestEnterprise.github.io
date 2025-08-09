@@ -79,6 +79,8 @@ const About = () => {
         <meta name="twitter:title" content="About Crest Enterprise | Thermal Paper Manufacturer" />
         <meta name="twitter:description" content="Established thermal paper manufacturer since 2015 in Sangli, Maharashtra, India." />
         <link rel="canonical" href="https://crestthermalrolls.com/about" />
+        <link rel="alternate" hrefLang="en-in" href="https://crestthermalrolls.com/about" />
+        <link rel="alternate" hrefLang="x-default" href="https://crestthermalrolls.com/about" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",

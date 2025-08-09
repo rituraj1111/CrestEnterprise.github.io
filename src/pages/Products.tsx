@@ -155,6 +155,8 @@ const Products = () => {
         <meta name="twitter:title" content="Thermal Paper Billing Rolls | POS Machine Paper" />
         <meta name="twitter:description" content="Premium thermal paper rolls for POS systems and billing machines in Maharashtra, India." />
         <link rel="canonical" href="https://crestthermalrolls.com/products" />
+        <link rel="alternate" hrefLang="en-in" href="https://crestthermalrolls.com/products" />
+        <link rel="alternate" hrefLang="x-default" href="https://crestthermalrolls.com/products" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
