@@ -5,9 +5,15 @@ interface LazyImageProps {
   alt: string;
   className?: string;
   placeholder?: string;
+  srcSet?: string;
+  sizes?: string;
+  width?: number | string;
+  height?: number | string;
+  decoding?: 'async' | 'auto' | 'sync';
+  fetchPriority?: 'high' | 'low' | 'auto';
 }
 
-const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className, placeholder }) => {
+const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className = '', placeholder, srcSet, sizes, width, height, decoding = 'async', fetchPriority }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -42,10 +48,16 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className, placeholder 
       <img
         ref={imgRef}
         src={isInView ? src : ''}
+        srcSet={isInView ? srcSet : undefined}
+        sizes={sizes}
         alt={alt}
+        width={width as any}
+        height={height as any}
         className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
         onLoad={() => setIsLoaded(true)}
         loading="lazy"
+        decoding={decoding}
+        fetchPriority={fetchPriority as any}
       />
     </div>
   );
