@@ -149,14 +149,14 @@ const Products = () => {
         <meta property="og:title" content="Thermal Paper Billing Rolls | POS Machine Paper | Crest Enterprise" />
         <meta property="og:description" content="Premium thermal paper rolls for POS systems, billing machines. Available in 57mm, 79mm sizes. Fast delivery in Maharashtra, India." />
         <meta property="og:type" content="product" />
-        <meta property="og:url" content="https://crestthermalrolls.com/products" />
-        <meta property="og:image" content="/thermal-paper-story.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Thermal Paper Billing Rolls | POS Machine Paper" />
-        <meta name="twitter:description" content="Premium thermal paper rolls for POS systems and billing machines in Maharashtra, India." />
-        <link rel="canonical" href="https://crestthermalrolls.com/products" />
-        <link rel="alternate" hrefLang="en-in" href="https://crestthermalrolls.com/products" />
-        <link rel="alternate" hrefLang="x-default" href="https://crestthermalrolls.com/products" />
+         <meta property="og:url" content="https://www.crestthermalrolls.com/products" />
+         <meta property="og:image" content="https://www.crestthermalrolls.com/thermal-paper-story.jpg" />
+         <meta name="twitter:card" content="summary_large_image" />
+         <meta name="twitter:title" content="Thermal Paper Billing Rolls | POS Machine Paper" />
+         <meta name="twitter:description" content="Premium thermal paper rolls for POS systems and billing machines in Maharashtra, India." />
+         <link rel="canonical" href="https://www.crestthermalrolls.com/products" />
+         <link rel="alternate" hrefLang="en-in" href="https://www.crestthermalrolls.com/products" />
+         <link rel="alternate" hrefLang="x-default" href="https://www.crestthermalrolls.com/products" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",

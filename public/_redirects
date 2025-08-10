@@ -1,3 +1,6 @@
+# Enforce www canonical host
+https://crestthermalrolls.com/*  https://www.crestthermalrolls.com/:splat  301!
+
 # URL formatting redirects
 /PRODUCTS     /products     301
 /ABOUT        /about        301
