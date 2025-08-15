@@ -18,13 +18,14 @@ const Header = () => {
     { name: "Home", href: "/" },
     { name: "Products", href: "/products" },
     { name: "About", href: "/about" },
+    { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/contact" },
   ];
 
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className="bg-card border-b border-border shadow-soft">
+    <header className="bg-card border-b border-border shadow-soft sticky top-0 z-50">
       {/* Top bar with contact info */}
       <div className="bg-primary text-primary-foreground py-2">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">

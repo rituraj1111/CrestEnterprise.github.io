@@ -5,7 +5,7 @@ import VideoHero from "@/components/VideoHero";
 import ProductsSection from "@/components/ProductsSection";
 import CustomersSection from "@/components/CustomersSection";
 import AchievementsSection from "@/components/AchievementsSection";
-import FAQSection from "@/components/FAQSection";
+
 import TrustSignalsSection from "@/components/TrustSignalsSection";
 import CTASection from "@/components/CTASection";
 import LocalizationSection from "@/components/LocalizationSection";
@@ -146,7 +146,6 @@ const Index = () => {
           <TrustSignalsSection />
           <LocalizationSection />
           <AchievementsSection />
-          <FAQSection />
           <CTASection />
         </main>
         <Footer />

@@ -1,45 +1,31 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Download, MessageCircle, Users, Package } from "lucide-react";
+import { ArrowRight, Users, Package } from "lucide-react";
 import { Link } from "react-router-dom";
+import QuoteModal from "@/components/QuoteModal";
 
 const CTASection = () => {
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+  
   const ctaOptions = [
-    {
-      title: "Request a Quote Now",
-      description: "Get competitive pricing for bulk orders and custom requirements",
-      icon: MessageCircle,
-      action: "Get Quote",
-      link: "/contact",
-      variant: "default" as const,
-      color: "bg-gradient-accent"
-    },
     {
       title: "Bulk Discount Inquiry", 
       description: "Special wholesale pricing for large quantity orders",
       icon: Package,
       action: "Bulk Pricing",
-      link: "/contact",
       variant: "outline" as const,
-      color: "border-primary"
-    },
-    {
-      title: "Download Product Catalog",
-      description: "Complete specifications and pricing information",
-      icon: Download,
-      action: "Download PDF",
-      link: "/contact",
-      variant: "outline" as const,
-      color: "border-accent"
+      color: "border-primary",
+      onClick: () => setIsQuoteModalOpen(true)
     },
     {
       title: "Become a Distributor",
       description: "Join our network of authorized thermal paper distributors",
       icon: Users,
       action: "Apply Now",
-      link: "/contact",
       variant: "outline" as const,
-      color: "border-secondary"
+      color: "border-secondary",
+      onClick: () => setIsQuoteModalOpen(true)
     }
   ];
 
@@ -59,7 +45,7 @@ const CTASection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 gap-6 mb-12 max-w-2xl mx-auto">
           {ctaOptions.map((option, index) => {
             const IconComponent = option.icon;
             return (
@@ -71,13 +57,11 @@ const CTASection = () => {
                   <h3 className="text-lg font-semibold text-foreground mb-2">{option.title}</h3>
                   <p className="text-muted-foreground text-sm mb-4">{option.description}</p>
                   <Button 
-                    asChild 
+                    onClick={option.onClick}
                     variant={option.variant}
-                    className={`w-full ${option.variant === 'default' ? option.color : ''}`}
+                    className="w-full"
                   >
-                    <Link to={option.link}>
-                      {option.action} <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
+                    {option.action} <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
               </Card>
@@ -105,6 +89,11 @@ const CTASection = () => {
             </Button>
           </div>
         </div>
+        
+        <QuoteModal 
+          isOpen={isQuoteModalOpen} 
+          onClose={() => setIsQuoteModalOpen(false)} 
+        />
       </div>
     </section>
   );
