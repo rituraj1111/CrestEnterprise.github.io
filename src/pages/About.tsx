@@ -4,6 +4,7 @@ import { Award, Users, Factory, Truck, Shield, CheckCircle } from "lucide-react"
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BreadcrumbNav from "@/components/BreadcrumbNav";
 import InternalLinks from "@/components/InternalLinks";
 import { Helmet } from 'react-helmet';
 

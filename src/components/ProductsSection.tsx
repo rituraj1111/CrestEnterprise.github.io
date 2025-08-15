@@ -31,15 +31,15 @@ const ProductsSection = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Premium{" "}
+            Available Sizes:{" "}
             <span className="bg-gradient-accent bg-clip-text text-transparent">
-              Thermal Paper
+              57mm & 79mm
             </span>{" "}
-            Solutions
+            Thermal Paper Rolls
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            High-quality thermal paper rolls designed for superior print clarity and durability. 
-            Choose from our wide range of sizes to meet your specific business needs.
+            Premium BPA-free thermal paper rolls for POS systems, receipt printers, and billing machines. 
+            Custom coil sizes available with fast shipping across India. Buy in bulk for best prices.
           </p>
         </div>
 

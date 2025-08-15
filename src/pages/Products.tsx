@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import InternalLinks from "@/components/InternalLinks";
 import ProductDetailModal from "@/components/ProductDetailModal";
+import BreadcrumbNav from "@/components/BreadcrumbNav";
 import { Helmet } from 'react-helmet';
 import img57mm13mtr from "@/assets/57*13mtr.webp";
 import img57mm15mtr from "@/assets/57*15mtr.webp";
@@ -196,6 +197,7 @@ const Products = () => {
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
+        <BreadcrumbNav items={[{ label: "Thermal Paper Products", current: true }]} />
       
       <main className="py-20">
         <div className="container mx-auto px-4">

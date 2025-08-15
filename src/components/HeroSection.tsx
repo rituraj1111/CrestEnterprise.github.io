@@ -18,15 +18,15 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
-              Powering{" "}
+              Premium{" "}
               <span className="bg-gradient-accent bg-clip-text text-transparent">
-                Business
+                Thermal Paper Rolls
               </span>{" "}
-              Transactions
+              for POS, Receipts & Billing
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
-              From petrol pumps to supermarkets, our thermal paper rolls keep businesses 
-              running smoothly across India. Quality you can trust, service you can rely on.
+              Leading manufacturer of BPA-free thermal receipt rolls, POS paper, and ATM rolls. 
+              Trusted by 1000+ businesses across Maharashtra. ISO certified quality with bulk discounts and fast delivery.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button asChild size="lg" className="bg-gradient-accent hover:opacity-90 text-lg px-8 py-3">
@@ -43,13 +43,26 @@ const HeroSection = () => {
           <div className="relative">
             <div className="bg-card/30 backdrop-blur-sm rounded-2xl p-8 shadow-soft">
               <h2 className="text-2xl font-semibold text-foreground mb-4 text-center">
-                Trusted Partner for Thermal Solutions
+                Why Choose Crest Enterprise for Thermal Paper Rolls?
               </h2>
-              <p className="text-muted-foreground text-center leading-relaxed">
-                We specialize in manufacturing high-quality thermal paper rolls 
-                that meet the diverse needs of businesses across India. Our commitment 
-                to excellence ensures every roll delivers consistent performance.
-              </p>
+              <div className="space-y-3 text-left">
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-muted-foreground">BPA-Free & Eco-Friendly certified</span>
+                </div>
+                <div className="flex items-center">
+                  <Award className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0" />
+                  <span className="text-muted-foreground">ISO 9001:2015 Quality Assurance</span>
+                </div>
+                <div className="flex items-center">
+                  <Package className="h-5 w-5 text-purple-500 mr-3 flex-shrink-0" />
+                  <span className="text-muted-foreground">Available Sizes: 57mm & 79mm widths</span>
+                </div>
+                <div className="flex items-center">
+                  <Users className="h-5 w-5 text-orange-500 mr-3 flex-shrink-0" />
+                  <span className="text-muted-foreground">Bulk Discounts for Wholesale Orders</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

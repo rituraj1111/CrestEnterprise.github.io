@@ -9,6 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Truck, Shield } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BreadcrumbNav from "@/components/BreadcrumbNav";
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from "@/config/emailjs";
 import { Helmet } from 'react-helmet';
