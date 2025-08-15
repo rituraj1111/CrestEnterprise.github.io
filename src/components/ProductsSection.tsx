@@ -38,18 +38,11 @@ const ProductsSection = () => {
         </div>
 
         {/* Billing Machines and Paper Rolls Images */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          
-          
-          <Card className="overflow-hidden shadow-medium hover:shadow-xl transition-shadow duration-300">
-            
-            
-          </Card>
-        </div>
+        
 
         {/* Thermal Roll Categories */}
         <div className="mb-12">
-          <h3 className="text-3xl font-bold text-foreground mb-8 text-center">Our Thermal Roll Categories</h3>
+          
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {thermalRollCategories.map(category => <Link key={category.id} to="/products" className="block">
                 <Card className="overflow-hidden shadow-medium hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer group">
