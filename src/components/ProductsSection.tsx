@@ -2,14 +2,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Package } from "lucide-react";
 import { Link } from "react-router-dom";
-import billingMachinesImg from "@/assets/billing-machines.webp?w=640&format=webp&imagetools";
-import billingMachinesSrcSet from "@/assets/billing-machines.webp?w=380;640;1024&format=webp&as=srcset&imagetools";
-import thermalRollsImg from "@/assets/thermal-rolls.webp?w=640&format=webp&imagetools";
-import thermalRollsSrcSet from "@/assets/thermal-rolls.webp?w=380;640;1024&format=webp&as=srcset&imagetools";
-import img57mmCategory from "@/assets/57mm-category.webp?w=640&format=webp&imagetools";
-import img57mmCategorySrcSet from "@/assets/57mm-category.webp?w=380;640;800&format=webp&as=srcset&imagetools";
-import img79mmCategory from "@/assets/79mm-category.webp?w=640&format=webp&imagetools";
-import img79mmCategorySrcSet from "@/assets/79mm-category.webp?w=380;640;800&format=webp&as=srcset&imagetools";
+import billingMachinesImg from "@/assets/billing-machines.webp";
+import thermalRollsImg from "@/assets/thermal-rolls.webp";
+import img57mmCategory from "@/assets/57mm-category.webp";
+import img79mmCategory from "@/assets/79mm-category.webp";
 
 const ProductsSection = () => {
   const thermalRollCategories = [
@@ -17,7 +13,6 @@ const ProductsSection = () => {
       id: "57mm",
       title: "57mm Thermal Rolls",
       image: img57mmCategory,
-      imageSrcSet: img57mmCategorySrcSet,
       description: "Perfect for small to medium retail POS systems, handheld billing devices, and standard receipt printing applications.",
       sizes: ["13 mtr", "15 mtr", "20 mtr", "25 mtr"]
     },
@@ -25,7 +20,6 @@ const ProductsSection = () => {
       id: "79mm",
       title: "79mm Thermal Rolls", 
       image: img79mmCategory,
-      imageSrcSet: img79mmCategorySrcSet,
       description: "Ideal for medium to large POS systems, high-volume retail environments, and professional billing applications.",
       sizes: ["30 mtr", "40 mtr", "50 mtr"]
     }
@@ -55,7 +49,6 @@ const ProductsSection = () => {
             <div className="relative h-64">
               <img 
                 src={billingMachinesImg} 
-                srcSet={billingMachinesSrcSet}
                 alt="Billing machines setup" 
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -75,7 +68,6 @@ const ProductsSection = () => {
             <div className="relative h-64">
               <img 
                 src={thermalRollsImg} 
-                srcSet={thermalRollsSrcSet}
                 alt="Thermal paper rolls collection" 
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -102,7 +94,6 @@ const ProductsSection = () => {
                   <div className="relative h-64">
                     <img 
                       src={category.image} 
-                      srcSet={category.imageSrcSet}
                       alt={category.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"

@@ -1,8 +1,8 @@
-import { useState, useEffect, lazy, Suspense } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-const QuoteModalLazy = lazy(() => import("./QuoteModal"));
+import QuoteModal from "./QuoteModal";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -124,14 +124,10 @@ const Header = () => {
         )}
       </nav>
       
-      {isQuoteModalOpen && (
-        <Suspense fallback={null}>
-          <QuoteModalLazy 
-            isOpen={isQuoteModalOpen} 
-            onClose={() => setIsQuoteModalOpen(false)} 
-          />
-        </Suspense>
-      )}
+      <QuoteModal 
+        isOpen={isQuoteModalOpen} 
+        onClose={() => setIsQuoteModalOpen(false)} 
+      />
     </header>
   );
 };

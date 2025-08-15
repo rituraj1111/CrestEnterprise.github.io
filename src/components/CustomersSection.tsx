@@ -1,17 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Fuel, Hotel, ShoppingCart, Building2, Utensils, MapPin } from "lucide-react";
-import petrolPump from "@/assets/petrol-pump.webp?w=640&format=webp&imagetools";
-import petrolPumpSrcSet from "@/assets/petrol-pump.webp?w=380;640;1024&format=webp&as=srcset&imagetools";
-import supermarket from "@/assets/supermarket.webp?w=640&format=webp&imagetools";
-import supermarketSrcSet from "@/assets/supermarket.webp?w=380;640;1024&format=webp&as=srcset&imagetools";
-import hotel from "@/assets/hotel.webp?w=640&format=webp&imagetools";
-import hotelSrcSet from "@/assets/hotel.webp?w=380;640;1024&format=webp&as=srcset&imagetools";
-import corporate from "@/assets/corporate.webp?w=640&format=webp&imagetools";
-import corporateSrcSet from "@/assets/corporate.webp?w=380;640;1024&format=webp&as=srcset&imagetools";
-import foodCourt from "@/assets/food-court.webp?w=640&format=webp&imagetools";
-import foodCourtSrcSet from "@/assets/food-court.webp?w=380;640;1024&format=webp&as=srcset&imagetools";
-import transport from "@/assets/transport.webp?w=640&format=webp&imagetools";
-import transportSrcSet from "@/assets/transport.webp?w=380;640;1024&format=webp&as=srcset&imagetools";
+import petrolPumpImage from "@/assets/petrol-pump.webp";
+import supermarketImage from "@/assets/supermarket.webp";
+import hotelImage from "@/assets/hotel.webp";
+import corporateImage from "@/assets/corporate.webp";
+import foodCourtImage from "@/assets/food-court.webp";
+import transportImage from "@/assets/transport.webp";
 
 const CustomersSection = () => {
   const customerSegments = [
@@ -19,8 +13,7 @@ const CustomersSection = () => {
       name: "Petrol Pumps",
       description: "Fuel receipt printing for vehicles and customers",
       icon: Fuel,
-      image: petrolPump,
-      srcSet: petrolPumpSrcSet,
+      image: petrolPumpImage,
       features: ["Weather Resistant", "Quick Print", "Clear Text"],
       color: "bg-blue-500",
     },
@@ -28,8 +21,7 @@ const CustomersSection = () => {
       name: "Hotels & Restaurants",
       description: "Billing, KOT, and guest receipt management",
       icon: Hotel,
-      image: hotel,
-      srcSet: hotelSrcSet,
+      image: hotelImage,
       features: ["Food Safe", "Fast Printing", "Professional Look"],
       color: "bg-green-500",
     },
@@ -37,8 +29,7 @@ const CustomersSection = () => {
       name: "Supermarkets",
       description: "High-volume checkout and inventory printing",
       icon: ShoppingCart,
-      image: supermarket,
-      srcSet: supermarketSrcSet,
+      image: supermarketImage,
       features: ["High Capacity", "Barcode Support", "Cost Effective"],
       color: "bg-purple-500",
     },
@@ -46,8 +37,7 @@ const CustomersSection = () => {
       name: "Corporate Offices",
       description: "Invoice, receipt, and document printing",
       icon: Building2,
-      image: corporate,
-      srcSet: corporateSrcSet,
+      image: corporateImage,
       features: ["Professional Grade", "Long Storage", "Fade Resistant"],
       color: "bg-orange-500",
     },
@@ -55,8 +45,7 @@ const CustomersSection = () => {
       name: "Food Courts",
       description: "Order tickets and customer receipts",
       icon: Utensils,
-      image: foodCourt,
-      srcSet: foodCourtSrcSet,
+      image: foodCourtImage,
       features: ["Oil Resistant", "Quick Service", "Easy Handling"],
       color: "bg-red-500",
     },
@@ -64,8 +53,7 @@ const CustomersSection = () => {
       name: "Transport Hubs",
       description: "Ticketing and logistics documentation",
       icon: MapPin,
-      image: transport,
-      srcSet: transportSrcSet,
+      image: transportImage,
       features: ["Durable", "High Speed", "Multiple Sizes"],
       color: "bg-indigo-500",
     },
@@ -99,7 +87,6 @@ const CustomersSection = () => {
                   <div className="h-48 overflow-hidden">
                     <img 
                       src={segment.image} 
-                      srcSet={segment.srcSet as unknown as string}
                       alt={segment.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"

@@ -119,21 +119,21 @@ const Contact = () => {
         <meta property="og:title" content="Contact Crest Enterprise | Thermal Paper Supplier Sangli Maharashtra" />
         <meta property="og:description" content="Get instant quotes for thermal paper billing rolls and POS machine paper. Fast delivery across Maharashtra, India." />
         <meta property="og:type" content="website" />
-         <meta property="og:url" content="https://www.crestthermalrolls.com/contact" />
-         <meta property="og:image" content="https://www.crestthermalrolls.com/thermal-paper-story.jpg" />
-         <meta name="twitter:card" content="summary_large_image" />
-         <meta name="twitter:title" content="Contact Crest Enterprise | Thermal Paper Supplier" />
-         <meta name="twitter:description" content="Get instant quotes for thermal paper billing rolls in Maharashtra, India." />
-         <link rel="canonical" href="https://www.crestthermalrolls.com/contact" />
-         <link rel="alternate" hrefLang="en-in" href="https://www.crestthermalrolls.com/contact" />
-         <link rel="alternate" hrefLang="x-default" href="https://www.crestthermalrolls.com/contact" />
+        <meta property="og:url" content="https://crestthermalrolls.com/contact" />
+        <meta property="og:image" content="https://crestthermalrolls.com/thermal-paper-story.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Crest Enterprise | Thermal Paper Supplier" />
+        <meta name="twitter:description" content="Get instant quotes for thermal paper billing rolls in Maharashtra, India." />
+        <link rel="canonical" href="https://crestthermalrolls.com/contact" />
+        <link rel="alternate" hrefLang="en-in" href="https://crestthermalrolls.com/contact" />
+        <link rel="alternate" hrefLang="x-default" href="https://crestthermalrolls.com/contact" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "ContactPage",
             "name": "Contact Crest Enterprise",
             "description": "Contact page for Crest Enterprise - thermal paper billing rolls supplier",
-            "url": "https://www.crestthermalrolls.com/contact",
+            "url": "https://crestthermalrolls.com/contact",
             "mainEntity": {
               "@type": "LocalBusiness",
               "name": "Crest Enterprise",

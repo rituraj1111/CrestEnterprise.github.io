@@ -1,8 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import heroBgDefault from "@/assets/hero-bg.webp?w=1280&format=webp&imagetools"; 
-import heroBgSrcSet from "@/assets/hero-bg.webp?w=768;1024;1280;1600&format=webp&as=srcset&imagetools";
+import heroBgImg from "@/assets/hero-bg.webp"; 
 
 const VideoHero = () => {
   return (
@@ -10,14 +9,12 @@ const VideoHero = () => {
       {/* Background Image */}
       <div className="absolute inset-0" aria-hidden="true">
         <img 
-          src={heroBgDefault}
-          srcSet={heroBgSrcSet}
+          src={heroBgImg}
           alt="Thermal paper rolls background"
           className="w-full h-full object-cover"
           loading="eager"
           decoding="async"
           fetchPriority="high"
-          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/70"></div>
       </div>

@@ -1,21 +1,16 @@
 import { ArrowRight, CheckCircle, Users, Award, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import heroImageDefault from "@/assets/hero-creative.jpg?w=1280&imagetools";
-import heroImageSrcSet from "@/assets/hero-creative.jpg?w=768;1024;1280;1600&as=srcset&imagetools";
+import heroImage from "@/assets/hero-creative.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <img 
-          src={heroImageDefault} 
-          srcSet={heroImageSrcSet}
+          src={heroImage} 
           alt="Thermal Paper Solutions" 
           className="w-full h-full object-cover"
-          loading="eager"
-          decoding="async"
-          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60"></div>
       </div>

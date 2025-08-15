@@ -21,12 +21,12 @@ const Index = () => {
         <meta property="og:title" content="Thermal Paper Billing Rolls Supplier in Sangli, Maharashtra | Crest Enterprise" />
         <meta property="og:description" content="Premium thermal paper rolls for POS systems, billing machines. Fast delivery in Sangli, Kolhapur, Satara, Pune, Maharashtra." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.crestthermalrolls.com/" />
-        <meta property="og:image" content="https://www.crestthermalrolls.com/thermal-paper-story.jpg" />
+        <meta property="og:url" content="https://crestthermalrolls.com/" />
+        <meta property="og:image" content="https://crestthermalrolls.com/thermal-paper-story.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Thermal Paper Billing Rolls Supplier | Crest Enterprise" />
         <meta name="twitter:description" content="Premium thermal paper rolls for POS systems and billing machines in Maharashtra, India." />
-        <link rel="canonical" href="https://www.crestthermalrolls.com/" />
+        <link rel="canonical" href="https://crestthermalrolls.com/" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
@@ -41,7 +41,7 @@ const Index = () => {
             },
             "telephone": "+91-9890479000",
             "email": "enterprise.crest@gmail.com",
-            "url": "https://www.crestthermalrolls.com",
+            "url": "https://crestthermalrolls.com",
             "geo": {
               "@type": "GeoCoordinates",
               "latitude": "16.8524",

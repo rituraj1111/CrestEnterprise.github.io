@@ -73,22 +73,22 @@ const About = () => {
         <meta property="og:title" content="About Crest Enterprise | Leading Thermal Paper Supplier Maharashtra" />
         <meta property="og:description" content="Established thermal paper manufacturer since 2015. Premium billing rolls and POS machine paper supplier in Sangli, Maharashtra." />
         <meta property="og:type" content="website" />
-         <meta property="og:url" content="https://www.crestthermalrolls.com/about" />
-         <meta property="og:image" content="https://www.crestthermalrolls.com/thermal-paper-story.jpg" />
-         <meta name="twitter:card" content="summary_large_image" />
-         <meta name="twitter:title" content="About Crest Enterprise | Thermal Paper Manufacturer" />
-         <meta name="twitter:description" content="Established thermal paper manufacturer since 2015 in Sangli, Maharashtra, India." />
-         <link rel="canonical" href="https://www.crestthermalrolls.com/about" />
-         <link rel="alternate" hrefLang="en-in" href="https://www.crestthermalrolls.com/about" />
-         <link rel="alternate" hrefLang="x-default" href="https://www.crestthermalrolls.com/about" />
+        <meta property="og:url" content="https://crestthermalrolls.com/about" />
+        <meta property="og:image" content="https://crestthermalrolls.com/thermal-paper-story.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Crest Enterprise | Thermal Paper Manufacturer" />
+        <meta name="twitter:description" content="Established thermal paper manufacturer since 2015 in Sangli, Maharashtra, India." />
+        <link rel="canonical" href="https://crestthermalrolls.com/about" />
+        <link rel="alternate" hrefLang="en-in" href="https://crestthermalrolls.com/about" />
+        <link rel="alternate" hrefLang="x-default" href="https://crestthermalrolls.com/about" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Crest Enterprise",
             "foundingDate": "2015",
-             "url": "https://www.crestthermalrolls.com",
-             "logo": "https://www.crestthermalrolls.com/thermal-paper-story.jpg",
+            "url": "https://crestthermalrolls.com",
+            "logo": "https://crestthermalrolls.com/thermal-paper-story.jpg",
             "description": "Leading manufacturer and supplier of thermal paper billing rolls, POS machine paper, and receipt rolls since 2015",
             "address": {
               "@type": "PostalAddress",

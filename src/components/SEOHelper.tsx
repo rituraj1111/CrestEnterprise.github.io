@@ -44,20 +44,19 @@ const SEOHelper: React.FC<SEOHelperProps> = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
       
-      {/* Canonical - normalized to www */}
-      {canonicalUrl && (
-        <link
-          rel="canonical"
-          href={canonicalUrl.startsWith('https://www.crestthermalrolls.com')
-            ? canonicalUrl
-            : canonicalUrl.replace('https://crestthermalrolls.com', 'https://www.crestthermalrolls.com')}
-        />
+      {/* Canonical - Only if valid URL */}
+      {canonicalUrl && canonicalUrl.startsWith('https://crestthermalrolls.com') && (
+        <link rel="canonical" href={canonicalUrl} />
       )}
       
-      {/* Hreflang for regional targeting (no duplicates) */}
-      {hreflang?.map((lang, index) => (
-        <link key={index} rel="alternate" hrefLang={lang.hrefLang} href={lang.href.replace('https://crestthermalrolls.com', 'https://www.crestthermalrolls.com')} />
+      {/* Hreflang for regional targeting */}
+      {hreflang.length > 0 && hreflang.map((lang, index) => (
+        <link key={index} rel="alternate" hrefLang={lang.hrefLang} href={lang.href} />
       ))}
+      <link rel="alternate" hrefLang="en-in" href={canonicalUrl} />
+      <link rel="alternate" hrefLang="hi-in" href={canonicalUrl} />
+      <link rel="alternate" hrefLang="mr-in" href={canonicalUrl} />
+      <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
       
       {/* Geo tags for local SEO */}
       <meta name="geo.region" content="IN-MH" />
