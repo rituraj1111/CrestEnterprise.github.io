@@ -23,7 +23,7 @@ const CTASection = () => {
       icon: ArrowRight,
     }
   ];
-  return <section className="py-16 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5">
+  return <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-foreground mb-4">

@@ -23,7 +23,7 @@ const TrustSignalsSection = () => {
     color: "text-primary"
   }];
   const qualityPoints = ["Premium Quality Manufacturing with Advanced Technology", "100% Quality Tested for Print Clarity and Durability", "Zero Defect Policy with Quality Guarantee", "Chemical-Free and Food-Safe Thermal Paper", "Consistent Roll Diameter and Length Specifications", "Superior Storage Life without Fading or Yellowing"];
-  return <section className="py-16 bg-muted/20">
+  return <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Trust Signals */}
         

@@ -13,44 +13,44 @@ const CustomersSection = () => {
     icon: Fuel,
     image: petrolPumpImage,
     features: ["Weather Resistant", "Quick Print", "Clear Text"],
-    color: "bg-blue-500"
+    color: "bg-primary"
   }, {
     name: "Hotels & Restaurants",
     description: "Billing, KOT, and guest receipt management",
     icon: Hotel,
     image: hotelImage,
     features: ["Food Safe", "Fast Printing", "Professional Look"],
-    color: "bg-green-500"
+    color: "bg-accent"
   }, {
     name: "Supermarkets",
     description: "High-volume checkout and inventory printing",
     icon: ShoppingCart,
     image: supermarketImage,
     features: ["High Capacity", "Barcode Support", "Cost Effective"],
-    color: "bg-purple-500"
+    color: "bg-primary"
   }, {
     name: "Corporate Offices",
     description: "Invoice, receipt, and document printing",
     icon: Building2,
     image: corporateImage,
     features: ["Professional Grade", "Long Storage", "Fade Resistant"],
-    color: "bg-orange-500"
+    color: "bg-accent"
   }, {
     name: "Food Courts",
     description: "Order tickets and customer receipts",
     icon: Utensils,
     image: foodCourtImage,
     features: ["Oil Resistant", "Quick Service", "Easy Handling"],
-    color: "bg-red-500"
+    color: "bg-primary"
   }, {
     name: "Transport Hubs",
     description: "Ticketing and logistics documentation",
     icon: MapPin,
     image: transportImage,
     features: ["Durable", "High Speed", "Multiple Sizes"],
-    color: "bg-indigo-500"
+    color: "bg-accent"
   }];
-  return <section className="py-16 bg-muted/30">
+  return <section className="py-20 bg-muted/20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">

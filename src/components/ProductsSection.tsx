@@ -18,7 +18,7 @@ const ProductsSection = () => {
     description: "Ideal for medium to large POS systems, high-volume retail environments, and professional billing applications.",
     sizes: ["30 mtr", "40 mtr", "50 mtr"]
   }];
-  return <section className="py-16 bg-muted/30">
+  return <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
