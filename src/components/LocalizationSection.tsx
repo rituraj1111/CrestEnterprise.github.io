@@ -16,16 +16,16 @@ const LocalizationSection = () => {
       keywords: "thermal paper rolls Mumbai, bulk thermal paper Mumbai, POS rolls Mumbai"
     },
     {
-      city: "Delhi",
-      description: "Fast delivery thermal paper solutions across Delhi NCR region",
+      city: "Goa",
+      description: "Fast delivery thermal paper solutions across Goa",
       icon: Globe,
-      keywords: "thermal paper rolls Delhi, POS machine paper Delhi, receipt paper Delhi"
+      keywords: "thermal paper rolls Goa, POS machine paper Goa, receipt paper Goa"
     },
     {
-      city: "Bangalore",
-      description: "Thermal paper roll manufacturing and supply in Bangalore",
+      city: "Belgavi",
+      description: "Thermal paper roll manufacturing and supply in Belgavi",
       icon: MapPin,
-      keywords: "thermal paper rolls Bangalore, thermal receipt rolls Bangalore"
+      keywords: "thermal paper rolls Belgavi, thermal receipt rolls Belgavi"
     },
     {
       city: "Kolhapur",

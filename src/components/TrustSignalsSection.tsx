@@ -16,7 +16,7 @@ const TrustSignalsSection = () => {
       color: "text-green-500"
     },
     {
-      title: "1000+ Clients",
+      title: "10000+ Clients",
       description: "Trusted by Businesses Across India",
       icon: Users,
       color: "text-purple-500"

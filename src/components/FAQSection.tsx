@@ -8,7 +8,7 @@ const FAQSection = () => {
     answer: "Yes, all our thermal paper rolls are BPA-free and manufactured using eco-friendly processes. We are committed to environmental sustainability and provide chemical-free thermal paper that is safe for food contact applications."
   }, {
     question: "What is your minimum order quantity for bulk discounts?",
-    answer: "We offer competitive bulk pricing starting from orders of 100 rolls. Our wholesale discount structure provides better rates for larger quantities. Contact us for custom pricing based on your specific requirements."
+    answer: "We offer competitive bulk pricing starting from orders of 200 rolls. Our wholesale discount structure provides better rates for larger quantities. Contact us for custom pricing based on your specific requirements."
   }, {
     question: "How fast is your delivery across India?",
     answer: "We provide fast shipping across India with delivery within 2-3 business days for major cities like Mumbai, Pune, Delhi, Bangalore, Kolhapur, and Satara. Express delivery options are available for urgent orders."
