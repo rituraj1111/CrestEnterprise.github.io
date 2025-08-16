@@ -144,8 +144,8 @@ const Contact = () => {
                 "addressRegion": "Maharashtra",
                 "addressCountry": "IN"
               },
-              "telephone": "+91-9876543210",
-              "email": "info@crestthermalrolls.com"
+              "telephone": "+91-9890479000",
+              "email": "enterprise.crest@gmail.com"
             }
           }
         `}</script>

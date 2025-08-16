@@ -40,27 +40,6 @@ const About = () => {
     },
   ];
 
-  const team = [
-    {
-      name: "Rajesh Kumar",
-      position: "Founder & CEO",
-      experience: "25+ years in paper manufacturing",
-      description: "Visionary leader with deep industry expertise",
-    },
-    {
-      name: "Priya Sharma",
-      position: "Head of Operations",
-      experience: "15+ years in production management",
-      description: "Ensures smooth operations and quality control",
-    },
-    {
-      name: "Amit Singh",
-      position: "Sales Director",
-      experience: "12+ years in B2B sales",
-      description: "Drives business growth and customer relationships",
-    },
-  ];
-
   return (
     <>
       <Helmet>
