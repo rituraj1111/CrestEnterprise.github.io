@@ -71,23 +71,11 @@ const ProductsSection = () => {
 
         {/* Pricing Note */}
         <div className="text-center mb-8">
-          <div className="bg-accent/10 border border-accent/20 rounded-lg p-6 max-w-2xl mx-auto">
-            <Package className="h-8 w-8 text-accent mx-auto mb-3" />
-            <p className="text-lg font-medium text-foreground mb-2">Competitive Pricing</p>
-            <p className="text-muted-foreground">
-              Prices may vary based on quantity and specifications. Contact us for bulk pricing and custom requirements.
-            </p>
-          </div>
+          
         </div>
 
         {/* Call to Action */}
-        <div className="text-center">
-          <Button asChild size="lg" className="bg-gradient-accent hover:opacity-90">
-            <Link to="/contact">
-              Get Custom Quote <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
-        </div>
+        
       </div>
     </section>;
 };
