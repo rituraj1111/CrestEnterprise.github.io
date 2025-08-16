@@ -28,22 +28,7 @@ const TrustSignalsSection = () => {
         {/* Trust Signals */}
         
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {certifications.map((cert, index) => {
-            const IconComponent = cert.icon;
-            return (
-              <Card key={index} className="text-center hover:shadow-medium transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="inline-flex p-3 rounded-full bg-primary/10 mb-4">
-                    <IconComponent className={`h-8 w-8 ${cert.color}`} />
-                  </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{cert.title}</h3>
-                  <p className="text-sm text-muted-foreground">{cert.description}</p>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
+        
 
         {/* Green Practices Section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -60,12 +45,10 @@ const TrustSignalsSection = () => {
               the highest environmental standards.
             </p>
             <div className="space-y-3">
-              {qualityPoints.map((point, index) => (
-                <div key={index} className="flex items-start">
+              {qualityPoints.map((point, index) => <div key={index} className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-foreground">{point}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
           
