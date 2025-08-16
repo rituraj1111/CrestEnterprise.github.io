@@ -5,7 +5,7 @@ import heroBgImg from "@/assets/hero-bg.webp";
 
 const VideoHero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
       {/* Background Image */}
       <div className="absolute inset-0" aria-hidden="true">
         <img 

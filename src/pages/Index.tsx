@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet';
-import { CheckCircle, Truck, Shield } from "lucide-react";
 import Header from "@/components/Header";
 import VideoHero from "@/components/VideoHero";
 import ProductsSection from "@/components/ProductsSection";
@@ -142,11 +141,11 @@ const Index = () => {
         <main>
           <VideoHero />
           <ProductsSection />
+          <CTASection />
           <CustomersSection />
           <TrustSignalsSection />
           <LocalizationSection />
           <AchievementsSection />
-          <CTASection />
         </main>
         <Footer />
       </div>

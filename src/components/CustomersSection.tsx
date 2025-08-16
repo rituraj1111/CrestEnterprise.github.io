@@ -50,7 +50,7 @@ const CustomersSection = () => {
     features: ["Durable", "High Speed", "Multiple Sizes"],
     color: "bg-indigo-500"
   }];
-  return <section className="py-20 bg-muted/30">
+  return <section className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
@@ -96,8 +96,6 @@ const CustomersSection = () => {
               </Card>;
         })}
         </div>
-
-        
       </div>
     </section>;
 };

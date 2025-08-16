@@ -1,9 +1,7 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Package } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import billingMachinesImg from "@/assets/billing-machines.webp";
-import thermalRollsImg from "@/assets/thermal-rolls.webp";
 import img57mmCategory from "@/assets/57mm-category.webp";
 import img79mmCategory from "@/assets/79mm-category.webp";
 const ProductsSection = () => {
@@ -20,7 +18,7 @@ const ProductsSection = () => {
     description: "Ideal for medium to large POS systems, high-volume retail environments, and professional billing applications.",
     sizes: ["30 mtr", "40 mtr", "50 mtr"]
   }];
-  return <section className="py-20 bg-muted/30">
+  return <section className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
@@ -36,9 +34,6 @@ const ProductsSection = () => {
             Custom coil sizes available with fast shipping across India. Buy in bulk for best prices.
           </p>
         </div>
-
-        {/* Billing Machines and Paper Rolls Images */}
-        
 
         {/* Thermal Roll Categories */}
         <div className="mb-12">
@@ -69,13 +64,6 @@ const ProductsSection = () => {
           </div>
         </div>
 
-        {/* Pricing Note */}
-        <div className="text-center mb-8">
-          
-        </div>
-
-        {/* Call to Action */}
-        
       </div>
     </section>;
 };
